@@ -40,16 +40,13 @@ os.system('clear')
 os.system('xdg-open https://youtu.be/Rx4eNsxjCbE?si=PEa1vc3uShrxG723')
 os.system('xdg-open https://youtu.be/Rx4eNsxjCbE?si=PEa1vc3uShrxG723')
 # --- GITHUB APPROVAL SYSTEM ---
-def arsalan_approval():
-   
-    os.system('clear')
-  
-    # Aapka unique key identifier 
-    uuid_raw = str(os.getlogin()) + str(os.getuid())  
-    key = hashlib.md5(uuid_raw.encode()).hexdigest().upper()[:12]
-    # Yahan apni GitHub link lagayein jahan approved keys hongi
-  github_link = "https://raw.githubusercontent.com/khanisalma748-a11y/salmakhani/main/APROVEL-78"
-
+def arsalan_approval():  
+os.system('clear') 
+# Aapka unique key identifier 
+uuid_raw = str(os.getlogin()) + str(os.getuid())  
+key = hashlib.md5(uuid_raw.encode()).hexdigest().upper()[:12]
+# Yahan apni GitHub link lagayein jahan approved keys hon ga
+github_link="https://raw.githubusercontent.com/khanisalma748-a11y/salmakhani/main/APROVEL-78"
     
 print("\033[1;31m  _    ____ _____   _    _       _    _   _ ")
 print("\033[1;32m / \\  |  _ \\_   _| / \\  | |     / \\  | \\ | |")
