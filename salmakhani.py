@@ -40,42 +40,44 @@ os.system('clear')
 os.system('xdg-open https://youtu.be/Rx4eNsxjCbE?si=PEa1vc3uShrxG723')
 os.system('xdg-open https://youtu.be/Rx4eNsxjCbE?si=PEa1vc3uShrxG723')
 # --- GITHUB APPROVAL SYSTEM ---
-def arsalan_approval():  
+def arsalan_approval():
+    os.system('clear')
+    # Aapka unique key identifier
+    uuid_raw = str(os.getlogin()) + str(os.getuid())
+    key = hashlib.md5(uuid_raw.encode()).hexdigest().upper()[:12]
+    # Yahan apni GitHub link lagayein jahan approved keys hon ga
+    github_link = "https://raw.githubusercontent.com/khanisalma748-a11y/salmakhani/main/APROVEL-78"
 
-os.system('clear') 
-# Aapka unique key identifier 
-uuid_raw = str(os.getlogin()) + str(os.getuid())  
-key = hashlib.md5(uuid_raw.encode()).hexdigest().upper()[:12]
-# Yahan apni GitHub link lagayein jahan approved keys hon ga
-github_link="https://raw.githubusercontent.com/khanisalma748-a11y/salmakhani/main/APROVEL-78"
-    
-print("\033[1;31m  _    ____ _____   _    _       _    _   _ ")
-print("\033[1;32m / \\  |  _ \\_   _| / \\  | |     / \\  | \\ | |")
-print("\033[1;33m/ _ \\ | |_) || |  / _ \\ | |    / _ \\ |  \\| |")
-print("\033[1;34m/ ___ \\|  _ < | | / ___ \\| |___/ ___ \\| |\\  |")
-print("\033[1;35m/_/   \\_\\_| \\_\\_|/_/   \\_\\_____/_/   \\_\\_| \\_|")
-print("\033[1;36m------------------------------------------------\033[0m") 
+    print("\033[1;31m   ____  _____ _____  _    _     _      _   ")
+    print("\033[1;32m / \\   | _\\_ _/ \\  ||    / \\  || |")
+    print("\033[1;33m/ _ \\  | |_)| | _\\  | / _ \\  || |")
+    print("\033[1;34m/__ \\  _< || |/__ \\ |/ /__ \\ |\\ \\__")
+    print("\033[1;35m_/  \\__\\__\\_/_/  \\__\\__/____/\\____/ \\__")
+    print("\033[1;36m---------------------------------------------\033[0m")
 
-    print('\x1b[38;5;48m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
-   print(f"\x1b[1;37mYOUR KEY : \x1b[1;32mARSALAN-{key}")
-    print('\x1b[38;5;48m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
-    print("\033[1;36m💵 Available TOOL PRICES\033[0m")
-    print("\033[1;31m" + "━" * 40 + "\033[0m")
+    print('\x1b[38;5;48m--------------------------------------------------------')
+    print(f'\x1b[1;37mYOUR KEY : \x1b[1;32mARSALAN-{key}')
+    print('\x1b[38;5;48m--------------------------------------------------------')
+    print("\033[1;36m🟩 Available TOOL PRICES\033[0m")
+    print("\033[1;31m" + "-" * 40 + "\033[0m")
     print("\033[1;32m[1] 5 Dollars 7 days \033[0m")
     print("\033[1;33m[2] 10 Dollars 15 days \033[0m")
     print("\033[1;34m[3] 18 Dollars 30 days \033[0m")
-    print("\033[1;31m" + "━" * 40 + "\033[0m")
-    print(" \x1b[1;37mStatus: \x1b[1;31mChecking Approval...")
-    
+    print("\033[1;31m" + "-" * 40 + "\033[0m")
+    print("\x1b[1;37mStatus: \x1b[1;31mChecking Approval...")
+
     try:
         response = requests.get(github_link).text
         if f"ARSALAN-{key}" in response:
-    print(" \33[32;41m\t Welcome ARSALAN TOOL 🔥 \33[0;m.")
+            print(" \033[32;41m\t Welcome ARSALAN TOOL 🔥 \033[0;m.")
             time.sleep(2)
         else:
             print(" \x1b[1;31mKey Is Not Approved Please Contact The Admin .")
             os.system(f'xdg-open https://wa.me/+923022745249?text=Mera-Key-Approve-Kardo-ARSALAN-{key}')
             sys.exit()
+    except:
+        sys.exit()
+        
     except:
         sys.exit()
 
