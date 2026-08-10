@@ -488,6 +488,10 @@ def login_1(uid):
                 'fb_api_req_friendly_name': 'authenticate',
                 'fb_api_caller_class': 'com.facebook.account.login.protocol.Fb4aAuthHandler',
                 'api_key': '882a8490361da98702bf97a021ddc14d'
-            }
             headers = {
+    'User-Agent': 'Mozilla/5.0',
+    'Accept-Encoding': 'gzip, deflate',
+    'Connection': 'keep-alive'
+            }
+            
                 
