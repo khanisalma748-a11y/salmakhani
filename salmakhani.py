@@ -47,16 +47,16 @@ def arsalan_approval():
     key = hashlib.md5(uuid_raw.encode()).hexdigest().upper()[:12]
     
     # Yahan apni GitHub link lagayein jahan approved keys hongi
-    # Format: Raw text file on GitHub
-    github_link = "https://github.com/khanisalma748-a11y/salmakhani.git/blob/main/APROVEL-78"
+   # Format: Raw text file on GitHub
+ github_link = "https://github.com/khanisalma748-a11y/salmakhani.git/blob/main/APROVEL-78"
     
-  print("""
-\033[1;31m    _    ____  ____    _    _        _    _   _ 
-\033[1;32m   / \  |  _ \/ ___|  / \  | |      / \  | \ | |
-\033[1;33m  / _ \ | |_) \___ \ / _ \ | |     / _ \ |  \| |
-\033[1;34m / ___ \|  _ < ___) / ___ \| |___ / ___ \| |\  |
-\033[1;35m/_/   \_\_| \_\____/_/   \_\_____/_/   \_\_| \_|
-\033[1;36m----------------------------------------------       \033[0m""")
+print("\033[1;31m  _    ____ _____   _    _       _    _   _ ")
+print("\033[1;32m / \\  |  _ \\_   _| / \\  | |     / \\  | \\ | |")
+print("\033[1;33m/ _ \\ | |_) || |  / _ \\ | |    / _ \\ |  \\| |")
+print("\033[1;34m/ ___ \\|  _ < | | / ___ \\| |___/ ___ \\| |\\  |")
+print("\033[1;35m/_/   \\_\\_| \\_\\_|/_/   \\_\\_____/_/   \\_\\_| \\_|")
+print("\033[1;36m------------------------------------------------\033[0m") 
+
     print('\x1b[38;5;48m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
    print(f"\x1b[1;37mYOUR KEY : \x1b[1;32mARSALAN-{key}")
     print('\x1b[38;5;48m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
