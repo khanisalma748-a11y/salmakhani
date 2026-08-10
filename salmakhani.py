@@ -41,6 +41,7 @@ os.system('xdg-open https://youtu.be/Rx4eNsxjCbE?si=PEa1vc3uShrxG723')
 os.system('xdg-open https://youtu.be/Rx4eNsxjCbE?si=PEa1vc3uShrxG723')
 # --- GITHUB APPROVAL SYSTEM ---
 def arsalan_approval():  
+
 os.system('clear') 
 # Aapka unique key identifier 
 uuid_raw = str(os.getlogin()) + str(os.getuid())  
