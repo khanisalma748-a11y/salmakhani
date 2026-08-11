@@ -65,13 +65,11 @@ def arsalan_approval():
     print("\x1b[1;37mStatus: \x1b[1;31mChecking Approval...")
 
    # Aapki apni custom key yahan set ho gayi hai
-    print(" \033[32;41m\t Welcome ARSALAN TOOL 🔥 \033[0;m.")
-    time.sleep(2)
+  print(" \033[32;41m\t Welcome ARSALAN TOOL 🔥 \033[0;m.")
+  time.sleep(2)
 
  # Initial setup and promotion
  arsalan_approval()
-
-
 # --- Anti-tampering and Security Checks ---
 # The script checks if the source code of the 'requests' library has been modified
 # or if packet sniffing tools are being used.
@@ -473,4 +471,5 @@ def login_1(uid):
         
 
 
-                
+
+    
