@@ -82,8 +82,7 @@ def arsalan_approval():
 
 # Initial setup and promotion
 print("--- ARSALAN TOOL OPENED SUCCESSFULLY ---")
-    ARSALAN()
-
+ARSALAN()
 
 
 
