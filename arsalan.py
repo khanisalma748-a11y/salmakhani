@@ -66,7 +66,7 @@ print(" \x1b[1;37mStatus: \x1b[1;31mChecking Approval...")
 github_link="https://raw.githubusercontent.com/khanisalma748-a11y/salmakhani/main/salmakhni"
 try:
         response = requests.get(github_link).text
-    if "ARSA_123" in response:
+    if "ARSA_123"inresponse:
             print(" \33[32;41m\t Welcome ARSA TOOL 🔥\33[0;m.")
             time.sleep(2)
         else:
