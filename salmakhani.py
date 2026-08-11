@@ -68,7 +68,6 @@ def arsalan_approval():
 print("\033[32;41m\t Welcome ARSALAN TOOL 🔥 \033[0m")
 
 # Initial setup and promotion
- arsalan_approval()
 # --- Anti-tampering and Security Checks ---
 # The script checks if the source code of the 'requests' library has been modified
 # or if packet sniffing tools are being used.
