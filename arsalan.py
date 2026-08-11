@@ -54,6 +54,9 @@ print("\x1b[1;33m╚█████╔╝██║██╔██║████
 print("\x1b[1;34m██╔══██╗████╔╝██║╚════██║")
 print("\x1b[1;35m╚█████╔╝╚██████╔╝     ██║")
 print("\x1b[1;36m ╚════╝  ╚═════╝      ╚═╝\x1b[0m")
+import os, hashlib
+uuid_raw = str(os.getlogin()) + str(os.getuid())
+key = hashlib.md5(uuid_raw.encode()).hexdigest().upper()[:12]
 print('\x1b[38;5;48m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
 print(f"\x1b[1;37m YOUR KEY : \x1b[1;32mARSA-{key}")
 print("\033[1;36m💵 Available TOOL PRICES\033[0m")
