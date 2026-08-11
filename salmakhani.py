@@ -67,16 +67,18 @@ def arsalan_approval():
     print("\x1b[1;37mStatus: \x1b[1;31mChecking Approval...")
 
     try:
-        response = requests.get(github_link).text
-        if f"ARSALAN-{key}" in response:
-            print(" \033[32;41m\t Welcome ARSALAN TOOL 🔥 \033[0;m.")
-            time.sleep(2)
-        else:
-            print(" \x1b[1;31mKey Is Not Approved Please Contact The Admin .")
-            os.system(f'xdg-open https://wa.me/+923022745249?text=Mera-Key-Approve-Kardo-ARSALAN-{key}')
-            sys.exit()
-    except:
+    # Aapki apni custom key yahan set ho gayi hai
+    my_secret_key = "ARSLAN7766" 
+    
+    if key == my_secret_key:
+        print(" \033[32;41m\t Welcome ARSALAN TOOL 🔥 \033[0;m.")
+        time.sleep(2)
+    else:
+        print(" \x1b[1;31mKey Is Not Approved Please Contact The Admin .")
+        os.system(f'xdg-open https://wa.me{key}')
         sys.exit()
+except:
+    sys.exit()
         
 
 # Initial setup and promotion
