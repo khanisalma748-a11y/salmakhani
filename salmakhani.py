@@ -54,7 +54,6 @@ def arsalan_approval():
     print("\033[1;34m/__ \\  _< || |/__ \\ |/ /__ \\ |\\ \\__")
     print("\033[1;35m_/  \\__\\__\\_/_/  \\__\\__/____/\\____/ \\__")
     print("\033[1;36m---------------------------------------------\033[0m")
-
     print('\x1b[38;5;48m--------------------------------------------------------')
     print(f'\x1b[1;37mYOUR KEY : \x1b[1;32mARSALAN-{key}')
     print('\x1b[38;5;48m--------------------------------------------------------')
@@ -66,27 +65,13 @@ def arsalan_approval():
     print("\033[1;31m" + "-" * 40 + "\033[0m")
     print("\x1b[1;37mStatus: \x1b[1;31mChecking Approval...")
        # Aapki apni custom key yahan set ho gayi hai
-    my_secret_key = "ARSLAN7766"
-
-    if key == my_secret_key:
         print(" \033[32;41m\t Welcome ARSALAN TOOL 🔥 \033[0;m.")
-        time.sleep(2)
-    else:
-        print(" \x1b[1;31mKey Is Not Approved Please Contact The Admin .")
-        os.system(f"xdg-open https://wa.me{key}")
-        sys.exit()
-        
-    
-    
-        
+    time.sleep(2)
+            print(" \033[32;41m\t Welcome ARSALAN TOOL 🔥 \033[0;m.")
+    time.sleep(2)
 
 # Initial setup and promotion
-print("--- ARSALAN TOOL OPENED SUCCESSFULLY ---")
-login_1()
-
-
-
-
+arsalan_approval()
 
 # --- Anti-tampering and Security Checks ---
 # The script checks if the source code of the 'requests' library has been modified
