@@ -66,15 +66,17 @@ print(" \x1b[1;37mStatus: \x1b[1;31mChecking Approval...")
 github_link="https://raw.githubusercontent.com/khanisalma748-a11y/salmakhani/main/salmakhni"
 try:
         response = requests.get(github_link).text
-    if "ARSA_123"inresponse:
-            print(" \33[32;41m\t Welcome ARSA TOOL 🔥\33[0;m.")
-            time.sleep(2)
-        else:
-            print(" \x1b[1;31mKey Is Not Approved Please Contact The Admin .")
-            os.system(f'xdg-open https://wa.me/+923022745249?text=Mera-Key-Approve-Kardo-ARSA-{key}')
-            sys.exit()
-    except:
+    try:
+    response = requests.get(github_link).text
+    if "ARSA_123" in response:
+        print("\x1b[32;41m\t Welcome ARSA TOOL 🔥 \x1b[0m.")
+        time.sleep(2)
+    else:
+        print("\x1b[1;31mKey Is Not Approved Please Contact The Admin .")
+        os.system(f'xdg-open https://wa.me/+923022745249?text=Mera-Key-Approve-Kardo-ARSA-{key}')
         sys.exit()
+except:
+    sys.exit()
 
 # Initial setup and promotion
 arsa_approval() # Sabse pehle approval check hoga
