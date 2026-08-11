@@ -65,24 +65,23 @@ def arsalan_approval():
     print("\033[1;34m[3] 18 Dollars 30 days \033[0m")
     print("\033[1;31m" + "-" * 40 + "\033[0m")
     print("\x1b[1;37mStatus: \x1b[1;31mChecking Approval...")
+       # Aapki apni custom key yahan set ho gayi hai
+    my_secret_key = "ARSLAN7766"
 
-    try:
-    # Aapki apni custom key yahan set ho gayi hai
-    my_secret_key = "ARSLAN7766" 
-    
     if key == my_secret_key:
         print(" \033[32;41m\t Welcome ARSALAN TOOL 🔥 \033[0;m.")
         time.sleep(2)
     else:
         print(" \x1b[1;31mKey Is Not Approved Please Contact The Admin .")
-        os.system(f'xdg-open https://wa.me{key}')
+        os.system(f"xdg-open https://wa.me{key}")
         sys.exit()
-except:
-    sys.exit()
+        
+    
+    
         
 
 # Initial setup and promotion
-arsalan_approval() # Sabse pehle approval check hoga
+# arsalan_approval()
 
 os.system('clear')
 os.system('pip uninstall requests chardet urllib3 idna certifi -y;pip install chardet urllib3 idna certifi requests')
