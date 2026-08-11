@@ -494,9 +494,5 @@ def login_1(uid):
     'User-Agent': 'Mozilla/5.0',
     'Accept-Encoding': 'gzip, deflate',
     'Connection': 'keep-alive'
-            }
-    
-
-
-                   
+            }           
                 
