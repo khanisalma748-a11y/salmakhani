@@ -65,8 +65,8 @@ print("\033[1;31m" + "━" * 40 + "\033[0m")
 print(" \x1b[1;37mStatus: \x1b[1;31mChecking Approval...")
 github_link="https://raw.githubusercontent.com/khanisalma748-a11y/salmakhani/main/salmakhni"
 try:
-        response = requests.get(github_link).text
-    try:
+        response = requests.get(github_link).text  
+try:
     response = requests.get(github_link).text
     if "ARSA_123" in response:
         print("\x1b[32;41m\t Welcome ARSA TOOL 🔥 \x1b[0m.")
