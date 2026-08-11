@@ -63,7 +63,7 @@ print("\033[1;33m[2] 10 Dollars 15 days \033[0m")
 print("\033[1;34m[3] 18 Dollars 30 days \033[0m")
 print("\033[1;31m" + "━" * 40 + "\033[0m")
 print(" \x1b[1;37mStatus: \x1b[1;31mChecking Approval...")
-    github_link = "https://raw.githubusercontent.com/khanisalma748-a11y/salmakhani/main/salmakhni"
+    github_link="https://raw.githubusercontent.com/khanisalma748-a11y/salmakhani/main/salmakhni"
     try:
         response = requests.get(github_link).text
            if "ARSA_123" in response:
