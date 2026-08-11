@@ -239,8 +239,8 @@ def ____banner____():
 def creationyear(uid):
     """
     Estimates the Facebook account creation year based on the UID.
-    """    
-        if len(uid) == 10:
+    """   
+    if len(uid) == 10:
         if uid.startswith(('11529', '11503', '115')):
             return '2008'
     if len(uid) == 15:
