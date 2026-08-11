@@ -495,5 +495,9 @@ def login_1(uid):
     'Accept-Encoding': 'gzip, deflate',
     'Connection': 'keep-alive'
             }
-            
+            except:
+                pass
+
+
+                   
                 
