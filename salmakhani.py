@@ -81,15 +81,12 @@ def arsalan_approval():
         
 
 # Initial setup and promotion
-# arsalan_approval()
+os.system('clear')
+print("--- ARSALAN TOOL OPENED SUCCESSFULLY ---"
 
-os.system('clear')
-os.system('pip uninstall requests chardet urllib3 idna certifi -y;pip install chardet urllib3 idna certifi requests')
-os.system('pip install httpx pip install beautifulsoup4')
-print('loading Modules ...\n')
-os.system('clear')
-link = "https://wa.me/+923022745249"
-os.system(f'xdg-open {link}')
+
+
+
 
 
 # --- Anti-tampering and Security Checks ---
