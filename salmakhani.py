@@ -81,8 +81,7 @@ def arsalan_approval():
         
 
 # Initial setup and promotion
-os.system('clear')
-print("--- ARSALAN TOOL OPENED SUCCESSFULLY ---"
+print("--- ARSALAN TOOL OPENED SUCCESSFULLY ---")
 
 
 
