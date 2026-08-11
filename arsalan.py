@@ -46,7 +46,7 @@ def arsa_approval():
     
     # Yahan apni GitHub link lagayein jahan approved keys hongi
     # Format: Raw text file on GitHub
-    https://github.com/khanisalma748-a11y/salmakhani.git
+    # https://github.com/khanisalma748-a11y/salmakhani.git
     
     print("\x1b[1;31m█████╗  ██████╗ ██╗  ██╗")
 print("\x1b[1;32m██╔══██╗██╔═████╗██║  ██║")
