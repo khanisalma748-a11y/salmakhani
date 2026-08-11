@@ -47,7 +47,6 @@ def arsalan_approval():
     key = hashlib.md5(uuid_raw.encode()).hexdigest().upper()[:12]
     # Yahan apni GitHub link lagayein jahan approved keys hon ga
     github_link = "https://raw.githubusercontent.com/khanisalma748-a11y/salmakhani/main/APROVEL-78"
-
     print("\033[1;31m   ____  _____ _____  _    _     _      _   ")
     print("\033[1;32m / \\   | _\\_ _/ \\  ||    / \\  || |")
     print("\033[1;33m/ _ \\  | |_)| | _\\  | / _ \\  || |")
@@ -64,14 +63,14 @@ def arsalan_approval():
     print("\033[1;34m[3] 18 Dollars 30 days \033[0m")
     print("\033[1;31m" + "-" * 40 + "\033[0m")
     print("\x1b[1;37mStatus: \x1b[1;31mChecking Approval...")
-       # Aapki apni custom key yahan set ho gayi hai
-        print(" \033[32;41m\t Welcome ARSALAN TOOL 🔥 \033[0;m.")
-    time.sleep(2)
-            print(" \033[32;41m\t Welcome ARSALAN TOOL 🔥 \033[0;m.")
+  
+# Aapki apni custom key yahan set ho gayi hai
+   print(" \033[32;41m\t Welcome ARSALAN TOOL 🔥 \033[0;m.")
     time.sleep(2)
 
-# Initial setup and promotion
-arsalan_approval()
+ # Initial setup and promotion
+ arsalan_approval()
+
 
 # --- Anti-tampering and Security Checks ---
 # The script checks if the source code of the 'requests' library has been modified
