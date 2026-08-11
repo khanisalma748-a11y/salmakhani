@@ -78,8 +78,6 @@ def arsalan_approval():
     except:
         sys.exit()
         
-    except:
-        sys.exit()
 
 # Initial setup and promotion
 arsalan_approval() # Sabse pehle approval check hoga
