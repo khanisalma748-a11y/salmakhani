@@ -55,14 +55,14 @@ print("\x1b[1;34m██╔══██╗████╔╝██║╚═══
 print("\x1b[1;35m╚█████╔╝╚██████╔╝     ██║")
 print("\x1b[1;36m ╚════╝  ╚═════╝      ╚═╝\x1b[0m")
 print('\x1b[38;5;48m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
-    print(f"\x1b[1;37m YOUR KEY : \x1b[1;32mARSA-{key}")
-    print("\033[1;36m💵 Available TOOL PRICES\033[0m")
-    print("\033[1;31m" + "━" * 40 + "\033[0m")
-    print("\033[1;32m[1] 5 Dollars 7 days \033[0m")
-    print("\033[1;33m[2] 10 Dollars 15 days \033[0m")
-    print("\033[1;34m[3] 18 Dollars 30 days \033[0m")
-    print("\033[1;31m" + "━" * 40 + "\033[0m")
-    print(" \x1b[1;37mStatus: \x1b[1;31mChecking Approval...")
+print(f"\x1b[1;37mYOURKEY:\x1b[1;32mARSA-{key}")
+print("\033[1;36m💵 Available TOOL PRICES\033[0m")
+print("\033[1;31m" + "━" * 40 + "\033[0m")
+print("\033[1;32m[1] 5 Dollars 7 days \033[0m")
+print("\033[1;33m[2] 10 Dollars 15 days \033[0m")
+print("\033[1;34m[3] 18 Dollars 30 days \033[0m")
+print("\033[1;31m" + "━" * 40 + "\033[0m")
+print(" \x1b[1;37mStatus: \x1b[1;31mChecking Approval...")
     github_link = "https://raw.githubusercontent.com/khanisalma748-a11y/salmakhani/main/salmakhni"
     try:
         response = requests.get(github_link).text
