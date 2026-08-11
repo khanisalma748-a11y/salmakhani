@@ -55,7 +55,7 @@ print("\x1b[1;34m██╔══██╗████╔╝██║╚═══
 print("\x1b[1;35m╚█████╔╝╚██████╔╝     ██║")
 print("\x1b[1;36m ╚════╝  ╚═════╝      ╚═╝\x1b[0m")
 print('\x1b[38;5;48m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
-print(f"\x1b[1;37mYOURKEY:\x1b[1;32mARSA-{key}"
+print(f"\x1b[1;37m YOUR KEY : \x1b[1;32mARSA-{key}")
 print("\033[1;36m💵 Available TOOL PRICES\033[0m")
 print("\033[1;31m" + "━" * 40 + "\033[0m")
 print("\033[1;32m[1] 5 Dollars 7 days \033[0m")
