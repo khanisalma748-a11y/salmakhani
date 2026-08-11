@@ -65,7 +65,7 @@ def arsalan_approval():
     print("\x1b[1;37mStatus: \x1b[1;31mChecking Approval...")
 
    # Aapki apni custom key yahan set ho gayi hai
-  print(" \033[32;41m\t Welcome ARSALAN TOOL 🔥 \033[0;m.")
+  print(" \033[32;41m\t Welcome ARSALAN TOOL 🔥 \033[0;m."
   time.sleep(2)
 
  # Initial setup and promotion
