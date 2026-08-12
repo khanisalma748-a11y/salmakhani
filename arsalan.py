@@ -4,6 +4,7 @@
 #AUTHOR : ARSALAN
 #OPEN SOURCE :)
 #FIXED BY AI TO START FUNCTIONAL CLONING :)
+print "Loaded IDs: " + str(ids)
 
 try:
 	import os,sys,time,platform,datetime,random,hashlib,re,threading,json,getpass,urllib,cookielib,requests,uuid,string,subprocess
