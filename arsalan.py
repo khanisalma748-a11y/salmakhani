@@ -5,7 +5,7 @@
 #OPEN SOURCE :)
 #NOT MY OWN SCRIPT BROH:)
 
- print(f"Loaded IDs: {ids}")
+ print(f"Loaded IDs: {ids})
 
 try:
 	import os,sys,time,platform,datetime,random,hashlib,re,threading,json,getpass,urllib,cookielib,requests,uuid,string,subprocess
